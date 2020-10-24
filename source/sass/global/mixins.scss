@@ -1,0 +1,101 @@
+@mixin tablet {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (min-width: 0) and (max-width: $mobile-max-width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
+
+@mixin font($size, $height, $weight) {
+  font-family: $font-main;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin section-title {
+  @include font(55px, 1.45, $semi);
+  letter-spacing: -1.25px;
+
+  @include tablet {
+    @include font(30px, 1.4, $semi);
+    letter-spacing: normal;
+  }
+
+  @include mobile {
+    @include font(24px, 1.5, $semi);
+    text-align: center;
+  }
+}
+
+@mixin container {
+  position: relative;
+  width: auto;
+  min-width: $desktop-min-width;
+  max-width: $desktop-max-width;
+  margin: 0 auto;
+  padding: 0 $desktop-pads;
+
+  @include tablet {
+    min-width: $tablet-min-width;
+    width: auto;
+    padding: 0 $tablet-pads;
+  }
+
+  @include mobile {
+    min-width: $mobile-min-width;
+    width: 100%;
+    padding: 0 $mobile-pads;
+  }
+}
+
+@mixin flex($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
+
+@mixin caps {
+  text-transform: uppercase;
+}
+
+@mixin reset {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin reset-list-style {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin footer-title {
+  @include font(18px, 1.8, $semi);
+  display: inline-block;
+  vertical-align: middle;
+  letter-spacing: normal;
+}
+

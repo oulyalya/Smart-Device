@@ -1,0 +1,27 @@
+$font-main: "Montserrat", "Verdana", sans-serif;
+$reg: 400;
+$med: 500;
+$semi: 600;
+$bold: 700;
+
+$mobile-min-width: 320px;
+$mobile-max-width: 767px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1023px;
+$desktop-min-width: 1024px;
+$desktop-max-width: 1404px;
+$mobile-pads: 16px;
+$tablet-pads: 21px;
+$desktop-pads: 118px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+
+
+/*change colors*/
+$c_light: #fbf8f8; /*светлый фон и границы*/
+$c_dark-one: #141517; /*самый тёмный*/
+$c_dark-two: #2c2e3f; /*тёмный*/
+$c_accent-one: #fe7865; /*акцентный основной*/
+$c_accent-two: #f17d4b; /*акцентный при наведении*/
