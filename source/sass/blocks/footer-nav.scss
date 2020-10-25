@@ -1,0 +1,44 @@
+.footer-nav {
+  margin-left: 40px;
+  margin-right: auto;
+
+  @include tablet {
+    margin-left: 30px;
+  }
+
+  @include mobile {
+    @include flex(column);
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-left: 0;
+  }
+}
+
+.footer-nav__link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @include font(16px, 1.25, $med);
+  color: $c_ligt-one;
+
+
+  @include tablet {
+    @include font(12px, 1.25, $med);
+    margin-left: 18px;
+  }
+
+  @include mobile {
+    @include font(12px, 1.25, $med);
+    margin-left: 0;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

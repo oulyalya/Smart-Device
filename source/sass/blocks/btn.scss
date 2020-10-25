@@ -1,0 +1,21 @@
+.btn {
+  display: inline-block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: $c_ligt-one;
+
+  @include font(14px, 1.5, $semi);
+  text-align: center;
+  color: $c_main;
+
+  &:hover,
+  &:focus {
+    background-color: rgba($c_ligt-one, 0.8);
+  }
+
+  &:active {
+    background-color: rgba($c_ligt-one, 0.6);
+  }
+}
