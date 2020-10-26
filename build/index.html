@@ -201,7 +201,7 @@
         </article>
 
         <article class="catalog__item card">
-          <h3>Круиз "Минион-1"</h3>
+          <h3>Круиз "Минион - 1"</h3>
           <img src="img/cruise-minion1@1x.jpg" srcset="cruise-minion1@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           <div class="card__details">
             <dl>
@@ -221,24 +221,26 @@
     </section>
 
     <section class="booking" id="booking">
-      <div class="container">
-        <h2>Раннее бронирование</h2>
-        <p>Забронируйте тур за 3-6 месяцев до даты выезда и сэкономьте до 50%</p>
+      <div class="booking__container container">
+        <div class="booking__text-wrapper">
+          <h2>Раннее бронирование</h2>
+          <p>Забронируйте тур<br class="mobile-display-only"> за&nbsp;3-6&nbsp;месяцев<br> до даты выезда и&nbsp;сэкономьте&nbsp;до&nbsp;50%</p>
+        </div>
 
         <form class="booking__form form" action="#" method="post">
-          <p>Оставьте заявку и мы свяжемся с вами в ближайшее время</p>
+          <p>Оставьте заявку и&nbsp;мы&nbsp;свяжемся с вами в&nbsp;ближайшее время</p>
 
           <label class="visually-hidden" for="booking-name"><span>Укажите ваше имя</span></label>
           <input id="booking-name" type="text" name="booking-name" placeholder="Валерия" required="">
 
           <label class="visually-hidden" for="booking-tel"><span class="visually-hidden">Укажите ваше номер телефона</span></label>
-          <input id="booking-tel" type="tel" name="booking-tel" placeholder="89236889975" required="">
+          <input id="booking-tel" type="tel" name="booking-tel" pattern="^[ 0-9]+$" placeholder="89236889975" required="">
 
           <label class="visually-hidden" for="booking-email"><span class="visually-hidden">Укажите ваше имейл</span></label>
           <input id="booking-email" type="email" name="booking-email" placeholder="grishaewa.lera@gmail.com" required="">
 
           <input id="booking-agree" type="checkbox" name="personal-data-agreement">
-          <label for="booking-agree">Я согласен на обработку моих персональных данных</label>
+          <label for="booking-agree">Я согласен на обработку моих&nbsp;персональных данных</label>
 
           <button class="form__btn btn" type="submit">Оставить заявку</button>
         </form>
@@ -246,21 +248,26 @@
     </section>
 
     <section class="contacts" id="contacts">
-      <div class="container">
+      <div class="contacts__container container">
         <h2 class="visually-hidden">Контакты</h2>
-        <p>У вас ещё остались вопросы или сомнения? Приезжайте к нам в офис и мы вам все расскажем.</p>
+        <div class="contacts__text-wrapper">
+          <p>У вас ещё остались вопросы или сомнения? Приезжайте к&nbsp;нам в&nbsp;офис и&nbsp;мы&nbsp;вам все расскажем.</p>
 
-        <address class="contacts__address">
-          <p>г. Санкт Петербург, ул. Большая Конюшенная, 19/8</p>
-          <a href="tel:+88002000000">8-800-200-00-00</a>
-        </address>
+          <address class="contacts__address">
+            <p>г. Санкт Петербург,<br>ул. Большая Конюшенная, 19/8</p>
+            <a href="tel:+88002000000">8-800-200-00-00</a>
+          </address>
+        </div>
+        <div class="contacts__map-wrapper">
+          <img src="img/img-map@1x.jpg" srcset="img/img-map@2x.jpg 2x" width="560" height="306" alt="Мы на карте">
+        </div>
       </div>
     </section>
   </main>
   <footer class="page-footer">
     <div class="page-footer__container container">
       <a>
-        <img class="footer-logo" src="img/logo.svg" width="38" height="20" alt="Вернуться на главную">
+        <img class="page-footer__logo" src="img/logo.svg" width="70" height="38" alt="Вернуться на главную">
       </a>
 
       <div class="footer-nav">
