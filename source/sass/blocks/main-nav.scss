@@ -37,18 +37,18 @@
 }
 
 .main-nav__logo {
-  fill: $c_ligt-one;
+  fill: $c_light-one;
 
   @include tablet {
     width: 38px;
     height: 20px;
-    fill: $c_ligt-one;
+    fill: $c_light-one;
   }
 
   @include mobile {
     width: 42px;
     height: 22px;
-    fill: $c_ligt-one;
+    fill: $c_light-one;
   }
 }
 
@@ -70,12 +70,13 @@
 }
 
 .main-nav__link {
+  @include hover-effects;
   margin-left: 35px;
   padding-top: 15px;
   padding-bottom: 15px;
 
   @include font(16px,1.25, $med);
-  color: $c_ligt-one;
+  color: $c_light-one;
 
   @include tablet {
     margin-left: 25px;

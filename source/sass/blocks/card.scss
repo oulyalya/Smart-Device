@@ -25,6 +25,17 @@
   }
 }
 
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: $c_bg-light;
+  z-index: -100;
+}
+
 .card:hover {
   @include flex(column);
   background-color: $c_main;
@@ -46,7 +57,7 @@
   margin-left: 5px;
 
   @include font(18px, 1.5, $med);
-  color: $c_ligt-one;
+  color: $c_light-one;
 
   @include tablet {
     margin-left: 0;
@@ -95,7 +106,7 @@
   margin-bottom: 2px;
 
   @include font(14px, 1.4, $med);
-  color: $c_ligt-one;
+  color: $c_light-one;
 }
 
 .card__details dd {

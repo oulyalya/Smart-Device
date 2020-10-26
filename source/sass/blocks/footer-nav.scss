@@ -16,6 +16,7 @@
 }
 
 .footer-nav__link {
+  @include hover-effects;
   display: inline-block;
   vertical-align: middle;
   margin-left: 30px;
@@ -23,7 +24,7 @@
   padding-bottom: 15px;
 
   @include font(16px, 1.25, $med);
-  color: $c_ligt-one;
+  color: $c_light-one;
 
 
   @include tablet {

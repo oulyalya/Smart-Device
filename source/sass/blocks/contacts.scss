@@ -1,0 +1,141 @@
+.contacts {
+  padding-top: 120px;
+  padding-bottom: 120px;
+
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 80px;
+  }
+
+  @include mobile {
+    padding-top: 40px;
+    padding-bottom: 60px;
+  }
+}
+
+.contacts__container {
+  @include flex(row);
+  align-items: center;
+}
+
+.contacts__text-wrapper {
+  order: 2;
+  width: 50%;
+  margin-bottom: 15px;
+  /*padding-top: 60px;*/
+  padding-left: 7%;
+
+  @include tablet {
+    margin-bottom: 40px;
+    padding-left: 2%;
+  }
+
+  @include mobile {
+    order: 1;
+    width: 100%;
+    margin-bottom: 40px;
+    padding-left: 0;
+  }
+}
+
+.contacts__map-wrapper {
+  order: 1;
+  width: 50%;
+  overflow: hidden;
+
+  @include tablet {
+    width: 324px;
+    height: 355px;
+  }
+
+  @media (min-width: 878px) and (max-width: $desktop-min-width) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mobile {
+    order: 2;
+    width: 290px;
+    height: 316px;
+    margin: 0 auto;
+  }
+}
+
+.contacts__map-wrapper img {
+  max-width: none;
+  min-width: 100%;
+  width: auto;
+  min-height: 100%;
+  height: 100%;
+}
+
+.contacts p {
+  @include font(18px, 1.5, $med);
+}
+
+.contacts__address {
+  margin-top: 35px;
+
+  @include tablet {
+    margin-top: 25px;
+  }
+
+  @include mobile {
+    margin-top: 30px;
+  }
+}
+
+.contacts__address br {
+  display: none;
+
+  @include tablet {
+    display: inline;
+  }
+
+  @include mobile {
+    display: inline;
+  }
+}
+
+.contacts__address p,
+.contacts__address a {
+  position: relative;
+  padding-left: 25px;
+
+  @include font(16px, 1.5, $reg);
+  font-style: normal;
+  color: $c_main;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 20px;
+    height: 25px;
+    background-position: 0 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.contacts__address p::before {
+  background-image: url("../img/icon-address.svg");
+  /*background-size: 18px 25px;*/
+
+  @include tablet {
+    top: 0;
+    transform: translateY(0);
+  }
+
+  @include mobile {
+    top: 0;
+    transform: translateY(0);
+  }
+}
+
+.contacts__address a::before {
+  background-image: url("../img/icon-tel.svg");
+}
