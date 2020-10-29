@@ -1,5 +1,5 @@
 .contacts {
-  padding-top: 120px;
+  padding-top: 125px;
   padding-bottom: 120px;
 
   @include tablet {
@@ -9,7 +9,7 @@
 
   @include mobile {
     padding-top: 40px;
-    padding-bottom: 60px;
+    padding-bottom: 65px;
   }
 }
 
@@ -20,9 +20,10 @@
 
 .contacts__text-wrapper {
   order: 2;
-  width: 50%;
+  max-width: 50%;
+  width: auto;
+  flex-shrink: 1;
   margin-bottom: 15px;
-  /*padding-top: 60px;*/
   padding-left: 7%;
 
   @include tablet {
@@ -33,14 +34,19 @@
   @include mobile {
     order: 1;
     width: 100%;
+    max-width: 500px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 0;
   }
 }
 
 .contacts__map-wrapper {
+  position: relative;
   order: 1;
-  width: 50%;
+  width: 560px;
+  height: 306px;
   overflow: hidden;
 
   @include tablet {
@@ -61,12 +67,39 @@
   }
 }
 
+.contacts__map-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 215px;
+  left: 245px;
+  width: 23px;
+  height: 29px;
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  background-image: url("../img/map-marker.svg");
+
+  @include tablet {
+    top: 215px;
+    left: 106px;
+  }
+
+  @include mobile {
+    top: 222px;
+    left: 109px;
+  }
+}
+
 .contacts__map-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
   max-width: none;
-  min-width: 100%;
-  width: auto;
-  min-height: 100%;
+  width: 100%;
   height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
 .contacts p {
@@ -123,7 +156,6 @@
 
 .contacts__address p::before {
   background-image: url("../img/icon-address.svg");
-  /*background-size: 18px 25px;*/
 
   @include tablet {
     top: 0;

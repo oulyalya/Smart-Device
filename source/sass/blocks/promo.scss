@@ -8,7 +8,34 @@
   }
 
   @include mobile {
+    padding-top: 75px;
     padding-left: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100vw;
+      min-height: 500px;
+      background-color: red;
+      z-index: -1;
+
+      @include bg-img("../img/bg-promo@1x.jpg", "../img/bg-promo@2x.jpg", $c_additional);
+    }
+  }
+}
+
+.main-nav--no-js + .promo {
+  position: relative;
+  min-height: 500px;
+  padding-top: 100px;
+
+  &::before {
+    margin-left: -$mobile-pads;
+    margin-right: 0;
   }
 }
 

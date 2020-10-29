@@ -6,4 +6,9 @@
   @include tablet {
     min-height: 638px;
   }
+
+  @include mobile {
+    min-height: 500px;
+    background: none;
+  }
 }

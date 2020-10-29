@@ -11,7 +11,7 @@
 
   @include mobile {
     padding-top: 40px;
-    padding-bottom: 70px;
+    padding-bottom: 65px;
   }
 }
 
@@ -28,7 +28,16 @@
 
 .booking__text-wrapper {
   width: 510px;
-  margin-bottom: 15px;
+  max-width: 50%;
+  padding-bottom: 20px;
+
+  @include tablet {
+    max-width: none;
+  }
+
+  @include mobile {
+    max-width: none;
+  }
 }
 
 .booking h2 {
@@ -36,6 +45,10 @@
 
   @include section-title-bigger;
   color: $c_main;
+
+  @include tablet {
+    margin-bottom: 5px;
+  }
 
   @include mobile {
     margin-bottom: 15px;
@@ -50,6 +63,10 @@
   @include mobile {
     @include font(16px, 1.4, $reg);
     text-align: center;
+  }
+
+  @include mobile {
+    margin-bottom: 12px;
   }
 }
 
@@ -71,6 +88,6 @@
   width: 403px;
 
   @include tablet {
-    margin-top: 20px;
+    margin-top: 15px;
   }
 }
