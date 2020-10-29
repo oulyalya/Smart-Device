@@ -11,7 +11,7 @@
 <body>
   <header class="page-header">
     <div class="container">
-      <nav class="main-nav main-nav--no-js">
+      <nav class="main-nav main-nav--no-js main-nav--open">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo-link">
             <svg class="main-nav__logo" width="70" height="38" viewBox="0 0 70 38" fill="none">
@@ -23,15 +23,15 @@
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть/закрыть меню</span></button>
         </div>
         <div class="main-nav__list">
-          <a class="main-nav__link" href="#advantages">Преимущества</a>
-          <a class="main-nav__link" href="#">Направления</a>
-          <a class="main-nav__link" href="#cruises">Ближайшие круизы</a>
-          <a class="main-nav__link" href="#contacts">Контакты</a>
+          <a class="main-nav__link main-nav__link--advantages" href="#advantages">Преимущества</a>
+          <a class="main-nav__link main-nav__link--tours" href="#">Направления</a>
+          <a class="main-nav__link main-nav__link--cruises" href="#cruises">Ближайшие круизы</a>
+          <a class="main-nav__link main-nav__link--contacts" href="#contacts">Контакты</a>
         </div>
       </nav>
       <section class="promo">
         <h1>Круизы в&nbsp;Антарктику</h1>
-        <p>Волшебный мир айсбергов и пингвинов</p>
+        <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
       </section>
     </div>
   </header>
@@ -43,7 +43,14 @@
           <p>Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.</p>
         </div>
         <div class="trip__img-wrapper">
-          <img src="img/img-penguins@1x.jpg" srcset="img/img-penguins@2x.jpg 2x" alt="Фото пингвинов" width="560" height="301">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/img-penguins@1x.webp 1x, img/img-penguins@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/img-penguins@1x.webp 1x, img/img-penguins@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/img-penguins@1x.webp 1x, img/img-penguins@2x.webp 2x">
+
+            <!-- 1х: 560px; 2x: 1120px -->
+            <img src="img/img-penguins@1x.jpg" srcset="img/img-penguins@2x.jpg 2x" alt="Фото пингвинов" width="560" height="301">
+          </picture>
         </div>
       </div>
     </section>
@@ -75,7 +82,14 @@
 
         <article class="catalog__item card">
           <h3>Круиз "Астория"</h3>
-          <img src="img/cruise-astoria@1x.jpg" srcset="cruise-astoria@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-astoria@1x.jpg" srcset="cruise-astoria@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -93,8 +107,14 @@
 
         <article class="catalog__item card">
           <h3>Круиз “Элайн”</h3>
-          <!-- картинкаа - любаая соседняя -->
-          <img src="img/cruise-astoria@1x.jpg" srcset="cruise-astoria@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-astoria@1x.jpg" srcset="cruise-astoria@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -112,7 +132,15 @@
 
         <article class="catalog__item card">
           <h3>Круиз "Атлантис"</h3>
-          <img src="img/cruise-atlantis@1x.jpg" srcset="cruise-atlantis@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-atlantis@1x.jpg" srcset="cruise-atlantis@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
+
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -130,7 +158,15 @@
 
         <article class="catalog__item card">
           <h3>Круиз "Одиссей"</h3>
-          <img src="img/cruise-odissey@1x.jpg" srcset="cruise-odissey@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-odissey@1x.jpg" srcset="cruise-odissey@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
+
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -148,7 +184,16 @@
 
         <article class="catalog__item card">
           <h3>Круиз "Олимпия"</h3>
-          <img src="img/cruise-olympea@1x.jpg" srcset="cruise-olympea@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-olympea@1x.webp 1x, img/cruise-olympea@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-olympea@1x.webp 1x, img/cruise-olympea@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-olympea@1x.webp 1x, img/cruise-olympea@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-olympea@1x.jpg" srcset="cruise-olympea@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
+
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -166,7 +211,16 @@
 
         <article class="catalog__item card">
           <h3>Круиз "Аврора"</h3>
-          <img src="img/cruise-aurora@1x.jpg" srcset="cruise-aurora@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-aurora@1x.jpg" srcset="cruise-aurora@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
+
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -184,7 +238,16 @@
 
         <article class="catalog__item card">
           <h3>Круиз "Леонор"</h3>
-          <img src="img/cruise-leonor@1x.jpg" srcset="cruise-leonor@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-leonor@1x.webp 1x, img/cruise-leonor@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-leonor@1x.webp 1x, img/cruise-leonor@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-leonor@1x.webp 1x, img/cruise-leonor@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-leonor@1x.jpg" srcset="cruise-leonor@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
+
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -202,7 +265,16 @@
 
         <article class="catalog__item card">
           <h3>Круиз "Минион - 1"</h3>
-          <img src="img/cruise-minion1@1x.jpg" srcset="cruise-minion1@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-minion1@1x.webp 1x, img/cruise-minion1@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-minion1@1x.webp 1x, img/cruise-minion1@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-minion1@1x.webp 1x, img/cruise-minion1@2x.webp 2x">
+
+            <!-- 1х: 260px; 2x: 520px -->
+            <img src="img/cruise-minion1@1x.jpg" srcset="cruise-minion1@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
+          </picture>
+
           <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
@@ -259,7 +331,14 @@
           </address>
         </div>
         <div class="contacts__map-wrapper">
-          <img src="img/img-map@1x.jpg" srcset="img/img-map@2x.jpg 2x" width="560" height="306" alt="Мы на карте">
+          <picture>
+            <source type="image/webp" media="(min-width: 1024px)" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 660px)" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 320px)" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
+
+            <!-- 1х: 560px; 2x: 1120px -->
+            <img src="img/img-map@1x.jpg" srcset="img/img-map@2x.jpg 2x" width="560" height="306" alt="Мы на карте">
+          </picture>
         </div>
       </div>
     </section>
