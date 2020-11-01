@@ -9,7 +9,7 @@
   <link rel="preload" href="fonts/montserratmedium500.woff2" as="font">
 </head>
 <body>
-  <header class="page-header">
+  <header class="page-header" id="page-header">
     <div class="container">
       <nav class="main-nav main-nav--no-js main-nav--open">
         <div class="main-nav__logo-wrapper">
@@ -24,7 +24,7 @@
         </div>
         <div class="main-nav__list">
           <a class="main-nav__link main-nav__link--advantages" href="#advantages">Преимущества</a>
-          <a class="main-nav__link main-nav__link--tours" href="#">Направления</a>
+          <a class="main-nav__link main-nav__link--tours" href="#tours">Направления</a>
           <a class="main-nav__link main-nav__link--cruises" href="#cruises">Ближайшие круизы</a>
           <a class="main-nav__link main-nav__link--contacts" href="#contacts">Контакты</a>
         </div>
@@ -36,7 +36,7 @@
     </div>
   </header>
   <main>
-    <section class="trip">
+    <section class="trip" id="tours">
       <div class="trip__container container">
         <div class="trip__text-wrapper">
           <h2>Путешествие на&nbsp;край&nbsp;Земли</h2>
@@ -44,10 +44,7 @@
         </div>
         <div class="trip__img-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/img-penguins@1x.webp 1x, img/img-penguins@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/img-penguins@1x.webp 1x, img/img-penguins@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/img-penguins@1x.webp 1x, img/img-penguins@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/img-penguins@1x.webp 1x, img/img-penguins@2x.webp 2x">
             <!-- 1х: 560px; 2x: 1120px -->
             <img src="img/img-penguins@1x.jpg" srcset="img/img-penguins@2x.jpg 2x" alt="Фото пингвинов" width="560" height="301">
           </picture>
@@ -80,13 +77,10 @@
       <div class="catalog__container container">
         <h2>Ближайшие круизы</h2>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз "Астория"</h3>
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-astoria@1x.jpg" srcset="cruise-astoria@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -103,15 +97,12 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз “Элайн”</h3>
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-astoria@1x.jpg" srcset="cruise-astoria@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -128,15 +119,12 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз "Атлантис"</h3>
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
-
+            <source type="image/webp" srct="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-atlantis@1x.jpg" srcset="cruise-atlantis@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -154,15 +142,12 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз "Одиссей"</h3>
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-odissey@1x.jpg" srcset="cruise-odissey@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -180,16 +165,13 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз "Олимпия"</h3>
 
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-olympea@1x.webp 1x, img/cruise-olympea@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-olympea@1x.webp 1x, img/cruise-olympea@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-olympea@1x.webp 1x, img/cruise-olympea@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/cruise-olympea@1x.webp 1x, img/cruise-olympea@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-olympea@1x.jpg" srcset="cruise-olympea@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -207,16 +189,12 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз "Аврора"</h3>
-
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-aurora@1x.jpg" srcset="cruise-aurora@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -234,16 +212,13 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз "Леонор"</h3>
 
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-leonor@1x.webp 1x, img/cruise-leonor@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-leonor@1x.webp 1x, img/cruise-leonor@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-leonor@1x.webp 1x, img/cruise-leonor@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/cruise-leonor@1x.webp 1x, img/cruise-leonor@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-leonor@1x.jpg" srcset="cruise-leonor@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -261,16 +236,13 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
 
-        <article class="catalog__item card">
+        <div class="catalog__item card">
           <h3>Круиз "Минион - 1"</h3>
 
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/cruise-minion1@1x.webp 1x, img/cruise-minion1@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/cruise-minion1@1x.webp 1x, img/cruise-minion1@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/cruise-minion1@1x.webp 1x, img/cruise-minion1@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/cruise-minion1@1x.webp 1x, img/cruise-minion1@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-minion1@1x.jpg" srcset="cruise-minion1@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -288,7 +260,7 @@
             </dl>
             <a class="card__btn btn" href="#">Забронировать</a>
           </div>
-        </article>
+        </div>
       </div>
     </section>
 
@@ -311,7 +283,7 @@
           <label class="visually-hidden" for="booking-email"><span class="visually-hidden">Укажите ваше имейл</span></label>
           <input id="booking-email" type="email" name="booking-email" placeholder="grishaewa.lera@gmail.com" required="">
 
-          <input id="booking-agree" type="checkbox" name="personal-data-agreement">
+          <input id="booking-agree" type="checkbox" name="personal-data-agreement" required="">
           <label for="booking-agree">Я согласен на обработку моих&nbsp;персональных данных</label>
 
           <button class="form__btn btn" type="submit">Оставить заявку</button>
@@ -332,10 +304,7 @@
         </div>
         <div class="contacts__map-wrapper">
           <picture>
-            <source type="image/webp" media="(min-width: 1024px)" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 660px)" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
-            <source type="image/webp" media="(min-width: 320px)" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
-
+            <source type="image/webp" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
             <!-- 1х: 560px; 2x: 1120px -->
             <img src="img/img-map@1x.jpg" srcset="img/img-map@2x.jpg 2x" width="560" height="306" alt="Мы на карте">
           </picture>
@@ -345,13 +314,13 @@
   </main>
   <footer class="page-footer">
     <div class="page-footer__container container">
-      <a>
+      <a href="#page-header">
         <img class="page-footer__logo" src="img/logo.svg" width="70" height="38" alt="Вернуться на главную">
       </a>
 
       <div class="footer-nav">
         <a class="footer-nav__link" href="#advantages">Преимущества</a>
-        <a class="footer-nav__link" href="#">Направления</a>
+        <a class="footer-nav__link" href="#tours">Направления</a>
         <a class="footer-nav__link" href="#cruises">Ближайшие круизы</a>
         <a class="footer-nav__link" href="#contacts">Контакты</a>
       </div>
