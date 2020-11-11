@@ -76,14 +76,6 @@
   }
 }
 
-.booking .mobile-display-only {
-  display: none;
-
-  @include mobile {
-    display: inline;
-  }
-}
-
 .booking__form {
   width: 403px;
 

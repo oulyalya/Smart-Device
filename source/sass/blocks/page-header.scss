@@ -1,14 +1,3 @@
-.page-header {
-  min-height: 650px;
-
-  @include bg-img("../img/bg-promo@1x.jpg", "../img/bg-promo@2x.jpg", $c_additional);
-
-  @include tablet {
-    min-height: 638px;
-  }
-
-  @include mobile {
-    min-height: 500px;
-    background: none;
-  }
+.page-header__wrapper {
+  position: relative;
 }

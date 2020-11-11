@@ -136,27 +136,17 @@
 
   @include font(14px, 1.4, $reg);
 
-  .br-mobile-only {
-    display: none;
-  }
-
   @include tablet {
     line-height: 1.45;
-
-    & br {
-      display: none;
-    }
   }
 
   @include mobile {
     line-height: 1.45;
+  }
+}
 
-    .br-mobile-only {
-      display: inline;
-    }
-
-    .br-mobile-no-display {
-      display: none;
-    }
+.advantages__item br {
+  @include tablet {
+    display: none;
   }
 }

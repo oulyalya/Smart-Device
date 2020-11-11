@@ -1,10 +1,19 @@
 .main-nav {
+  position: absolute;
+  width: calc(100% - 2 * 103px);
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 100;
+
   @include flex(row);
   align-items: center;
   padding-top: 30px;
   padding-bottom: 30px;
 
   @include tablet {
+    width: calc(100% - 2 * 45px);
     padding-top: 20px;
     padding-bottom: 20px;
   }
@@ -13,6 +22,9 @@
     @include flex(column);
     justify-content: flex-start;
     align-items: flex-start;
+    width: 100%;
+    padding-left: $mobile-pads;
+    padding-right: $mobile-pads;
     padding-top: 20px;
   }
 }
@@ -39,7 +51,6 @@
       top: 0;
       left: 0;
       right: 0;
-      margin: 0 auto;
       width: 100vw;
       height: 100%;
       min-height: 100vh;
@@ -56,7 +67,9 @@
 }
 
 .main-nav--no-js {
-  position: static;
+  @include mobile {
+    position: static;
+  }
 }
 
 .main-nav--no-js .main-nav__toggle {
@@ -135,6 +148,7 @@
 
 .main-nav__list {
   @include flex(row);
+  margin-left: auto;
 
   @include mobile {
     @include flex(column);
