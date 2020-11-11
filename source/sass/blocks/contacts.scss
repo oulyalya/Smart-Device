@@ -22,7 +22,6 @@
   order: 2;
   max-width: 50%;
   width: auto;
-  /*flex-shrink: 1;*/
   margin-bottom: 15px;
   padding-left: 7%;
 
@@ -45,7 +44,7 @@
 .contacts__map-wrapper {
   position: relative;
   order: 1;
-  width: 50%;
+  width: 48.5%;
   height: 306px;
   overflow: hidden;
 
@@ -70,10 +69,10 @@
 .contacts__map-wrapper::after {
   content: "";
   position: absolute;
-  top: 68%;
-  left: 43%;
-  width: 23px;
-  height: 29px;
+  top: 70%;
+  left: 44%;
+  width: 20px;
+  height: 25px;
   z-index: 2;
   background-repeat: no-repeat;
   background-size: contain;
@@ -155,6 +154,8 @@
 }
 
 .contacts__address p::before {
+  top: 33%;
+  left: -3px;
   background-image: url("../img/icon-address.svg");
 
   @include tablet {

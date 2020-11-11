@@ -89,6 +89,7 @@
   @include mobile {
     @include flex(row);
     align-self: stretch;
+    max-width: none;
     margin-right: 0;
   }
 }

@@ -2,7 +2,14 @@
   @include flex(row);
   max-width: 15%;
 
+  @include tablet {
+    justify-content: flex-end;
+    max-width: none;
+    width: 120px;
+  }
+
   @include mobile {
+    max-width: none;
     margin-top: 10px;
   }
 }
@@ -22,7 +29,8 @@
 
   @include mobile {
     width: 15px;
-    margin-left: 19px;
+    margin-left: 0;
+    margin-right: 19px;
   }
 
   &:first-child {

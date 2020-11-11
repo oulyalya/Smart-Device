@@ -32,6 +32,11 @@
 
 .page-footer__logo-wrapper {
   max-width: 15%;
+
+  @include tablet {
+    max-width: 50px;
+    width: 50px;
+  }
 }
 
 .page-footer__logo {
