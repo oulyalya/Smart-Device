@@ -168,6 +168,10 @@
   }
 }
 
+.contacts a {
+  @include hover-effects;
+}
+
 .contacts__address a::before {
   background-image: url("../img/icon-tel.svg");
 }
