@@ -2,15 +2,16 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scalev=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Круизы в Антарктику</title>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="preload" href="fonts/montserratregular400.woff2" as="font">
   <link rel="preload" href="fonts/montserratmedium500.woff2" as="font">
+  <link rel="preload" href="fonts/montserratbold700.woff2" as="font">
 </head>
 <body>
   <header class="page-header" id="page-header">
-    <div class="container">
+    <div class="page-header__container container">
       <nav class="main-nav main-nav--no-js main-nav--open">
         <div class="main-nav__logo-wrapper">
           <a class="main-nav__logo-link">
@@ -29,13 +30,15 @@
           <a class="main-nav__link main-nav__link--contacts" href="#contacts">Контакты</a>
         </div>
       </nav>
-      <section class="promo">
-        <h1>Круизы в&nbsp;Антарктику</h1>
-        <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
-      </section>
     </div>
   </header>
   <main>
+    <section class="promo">
+      <div class="promo__container container">
+        <h1>Круизы в&nbsp;Антарктику</h1>
+        <p>Волшебный мир айсбергов&nbsp;и&nbsp;пингвинов</p>
+      </div>
+    </section>
     <section class="trip" id="tours">
       <div class="trip__container container">
         <div class="trip__text-wrapper">
@@ -68,7 +71,7 @@
 
         <div class="advantages__item advantages__item--zodiac">
           <h3>Экскурсионные туры на Zodiac</h3>
-          <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются<br class="br-mobile-only"> на оборудованных лодках&nbsp;<br class="br-mobile-only">типа<br class="br-mobile-no-display"> Zodiac в&nbsp;сопровождении<br class="br-mobile-no-display"> опытных экскурсоводов.</p>
+          <p>Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на оборудованных лодках&nbsp;типа Zodiac в&nbsp;сопровождении опытных экскурсоводов.</p>
         </div>
       </div>
     </section>
@@ -124,7 +127,7 @@
         <div class="catalog__item card">
           <h3>Круиз "Атлантис"</h3>
           <picture>
-            <source type="image/webp" srct="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
+            <source type="image/webp" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-atlantis@1x.jpg" srcset="cruise-atlantis@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
@@ -268,7 +271,7 @@
       <div class="booking__container container">
         <div class="booking__text-wrapper">
           <h2>Раннее бронирование</h2>
-          <p>Забронируйте тур<br class="mobile-display-only"> за&nbsp;3-6&nbsp;месяцев<br> до даты выезда и&nbsp;сэкономьте&nbsp;до&nbsp;50%</p>
+          <p>Забронируйте тур за&nbsp;3-6&nbsp;месяцев<br> до даты выезда и&nbsp;сэкономьте&nbsp;до&nbsp;50%</p>
         </div>
 
         <form class="booking__form form" action="#" method="post">
@@ -286,7 +289,7 @@
           <input id="booking-agree" type="checkbox" name="personal-data-agreement" required>
           <label for="booking-agree">Я согласен на обработку моих&nbsp;персональных данных</label>
 
-          <button class="form__btn btn" type="submit">Оставить заявку</button>
+          <button class="btn" type="submit">Оставить заявку</button>
         </form>
       </div>
     </section>
@@ -306,7 +309,7 @@
           <picture>
             <source type="image/webp" srcset="img/img-map@1x.webp 1x, img/img-map@2x.webp 2x">
             <!-- 1х: 560px; 2x: 1120px -->
-            <img src="img/img-map@1x.jpg" srcset="img/img-map@2x.jpg 2x" width="560" height="306" alt="Мы на карте">
+            <img src="img/img-map@1x.jpg" srcset="img/img-map@2x.jpg 2x" alt="Мы на карте" width="560" height="306">
           </picture>
         </div>
       </div>
@@ -315,7 +318,7 @@
   <footer class="page-footer">
     <div class="page-footer__container container">
       <a href="#page-header">
-        <img class="page-footer__logo" src="img/logo.svg" width="70" height="38" alt="Вернуться на главную">
+        <img class="page-footer__logo" src="img/logo.svg" alt="Вернуться на главную" width="70" height="38">
       </a>
 
       <div class="footer-nav">
