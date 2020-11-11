@@ -1,4 +1,5 @@
 .form {
+  position: relative;
   display: block;
   padding-top: 45px;
   padding-bottom: 50px;
@@ -12,6 +13,10 @@
     padding-left: 30px;
     padding-right: 30px;
   }
+}
+
+.form div {
+  position: relative;
 }
 
 .form p {
@@ -73,6 +78,8 @@
 
 .form input[type="checkbox"] {
   @include visually-hidden;
+  left: 10px;
+  top: 100%;
 }
 
 .form input[type="checkbox"] + label {
@@ -80,6 +87,7 @@
   display: block;
   margin-top: 10px;
   padding-left: 22px;
+  cursor: pointer;
 
   @include font(10px, 1.3, $reg);
   color: $c_light-one;
@@ -101,6 +109,11 @@
   height: 18px;
   letter-spacing: -0.2px;
   background-color: $c_light-one;
+  border: 2px solid transparent;
+}
+
+.form input[type="checkbox"]:focus + label::before {
+  border: 2px solid rgba($c_main, 0.5);
 }
 
 .form input[type="checkbox"]:checked + label {
@@ -143,4 +156,5 @@
 .form button {
   width: 100%;
   margin-top: 25px;
+  cursor: pointer;
 }

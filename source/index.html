@@ -82,14 +82,14 @@
       <div class="catalog__container container">
         <h2>Ближайшие круизы</h2>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз "Астория"</h3>
           <picture>
             <source type="image/webp" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
             <!-- 1х: 260px; 2x: 520px -->
             <img src="img/cruise-astoria@1x.jpg" srcset="cruise-astoria@2x.jpg 2x" alt="Пейзаж окрестностей" width="260" height="386">
           </picture>
-          <div class="card__details" tabindex="0">
+          <div class="card__details">
             <dl>
               <dt>Маршрут</dt>
               <dd>Аргентина - Фолклендские острова - Антарктида</dd>
@@ -100,11 +100,11 @@
               <dt>Цена</dt>
               <dd>от 11500 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз “Элайн”</h3>
           <picture>
             <source type="image/webp" srcset="img/cruise-astoria@1x.webp 1x, img/cruise-astoria@2x.webp 2x">
@@ -122,11 +122,11 @@
               <dt>Цена</dt>
               <dd>от 14500 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз "Атлантис"</h3>
           <picture>
             <source type="image/webp" srcset="img/cruise-atlantis@1x.webp 1x, img/cruise-atlantis@2x.webp 2x">
@@ -145,11 +145,11 @@
               <dt>Цена</dt>
               <dd>от 14500 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз "Одиссей"</h3>
           <picture>
             <source type="image/webp" srcset="img/cruise-odissey@1x.webp 1x, img/cruise-odissey@2x.webp 2x">
@@ -168,11 +168,11 @@
               <dt>Цена</dt>
               <dd>от 9700 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз "Олимпия"</h3>
 
           <picture>
@@ -192,11 +192,11 @@
               <dt>Цена</dt>
               <dd>от 18600 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз "Аврора"</h3>
           <picture>
             <source type="image/webp" srcset="img/cruise-aurora@1x.webp 1x, img/cruise-aurora@2x.webp 2x">
@@ -215,11 +215,11 @@
               <dt>Цена</dt>
               <dd>от 11700 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз "Леонор"</h3>
 
           <picture>
@@ -239,11 +239,11 @@
               <dt>Цена</dt>
               <dd>от 12500 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
 
-        <div class="catalog__item card">
+        <div class="catalog__item card" tabindex="0">
           <h3>Круиз "Минион - 1"</h3>
 
           <picture>
@@ -263,7 +263,7 @@
               <dt>Цена</dt>
               <dd>от 12300 $</dd>
             </dl>
-            <a class="card__btn btn" href="#">Забронировать</a>
+            <a class="card__btn btn" href="#" tabindex="0">Забронировать</a>
           </div>
         </div>
       </div>
@@ -283,13 +283,15 @@
           <input id="booking-name" type="text" name="booking-name" placeholder="Валерия" required>
 
           <label class="visually-hidden" for="booking-tel"><span class="visually-hidden">Укажите ваше номер телефона</span></label>
-          <input id="booking-tel" type="tel" name="booking-tel" pattern="^[ 0-9]+$" placeholder="89236889975" required>
+          <input id="booking-tel" type="tel" name="booking-tel" pattern="(\+?\d[- .]*){7,13}" placeholder="89236889975" required>
 
           <label class="visually-hidden" for="booking-email"><span class="visually-hidden">Укажите ваше имейл</span></label>
           <input id="booking-email" type="email" name="booking-email" placeholder="grishaewa.lera@gmail.com" required>
 
-          <input id="booking-agree" type="checkbox" name="personal-data-agreement" required>
-          <label for="booking-agree">Я согласен на обработку моих&nbsp;персональных данных</label>
+          <div>
+            <input id="booking-agree" type="checkbox" name="personal-data-agreement" required>
+            <label for="booking-agree">Я согласен на обработку моих&nbsp;персональных данных</label>
+          </div>
 
           <button class="btn" type="submit">Оставить заявку</button>
         </form>

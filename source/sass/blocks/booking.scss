@@ -2,7 +2,7 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @include bg-img("../img/bg-booking@1x.jpg", "../img/bg-booking@2x.jpg", $c_additional);
+  @include bg-img("../img/bg-booking@1x.jpg", "../img/bg-booking@2x.jpg", $c_bg-light);
 
   @include tablet {
     padding-top: 60px;

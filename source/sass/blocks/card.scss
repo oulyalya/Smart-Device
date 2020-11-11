@@ -33,7 +33,8 @@
   z-index: -100;
 }
 
-.card:hover {
+.card:hover,
+.card:focus {
   padding-top: 28px;
   padding-bottom: 30px;
   background-color: $c_main;
@@ -67,14 +68,16 @@
   }
 }
 
-.card:hover h3 {
+.card:hover h3,
+.card:focus h3 {
   order: 1;
   margin-top: 0;
   margin-left: 0;
   margin-bottom: 15px;
 }
 
-.card:hover .card__details {
+.card:hover .card__details,
+.card:focus .card__details {
   order: 2;
   visibility: visible;
 }
