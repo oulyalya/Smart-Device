@@ -22,7 +22,7 @@
   order: 2;
   max-width: 50%;
   width: auto;
-  flex-shrink: 1;
+  /*flex-shrink: 1;*/
   margin-bottom: 15px;
   padding-left: 7%;
 
@@ -45,7 +45,7 @@
 .contacts__map-wrapper {
   position: relative;
   order: 1;
-  width: 560px;
+  width: 50%;
   height: 306px;
   overflow: hidden;
 
@@ -70,8 +70,8 @@
 .contacts__map-wrapper::after {
   content: "";
   position: absolute;
-  top: 215px;
-  left: 245px;
+  top: 68%;
+  left: 43%;
   width: 23px;
   height: 29px;
   z-index: 2;
