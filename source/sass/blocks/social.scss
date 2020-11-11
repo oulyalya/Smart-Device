@@ -1,5 +1,6 @@
 .social {
   @include flex(row);
+  max-width: 15%;
 
   @include mobile {
     margin-top: 10px;
@@ -11,21 +12,21 @@
   display: block;
   width: 25px;
   height: 30px;
-  margin-right: 25px;
+  margin-left: 25px;
   background-position: 50%;
   background-repeat: no-repeat;
 
   @include tablet {
-    margin-right: 10px;
+    margin-left: 10px;
   }
 
   @include mobile {
     width: 15px;
-    margin-right: 19px;
+    margin-left: 19px;
   }
 
-  &:last-child {
-    margin-right: 0;
+  &:first-child {
+    margin-rileftght: 0;
   }
 }
 

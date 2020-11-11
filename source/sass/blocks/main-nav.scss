@@ -83,6 +83,7 @@
 }
 
 .main-nav__logo-wrapper {
+  max-width: 20%;
   margin-right: 30px;
 
   @include mobile {
@@ -148,10 +149,14 @@
 
 .main-nav__list {
   @include flex(row);
+  justify-content: flex-end;
+  max-width: 80%;
+  width: auto;
   margin-left: auto;
 
   @include mobile {
     @include flex(column);
+    max-width: none;
     width: 100%;
     margin-top: 30px;
     padding-bottom: 15px;

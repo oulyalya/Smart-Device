@@ -35,13 +35,11 @@
 }
 
 .catalog__item {
-  width: 22.5%;
-  min-width: 260px;
+  width: 260px;
   margin-bottom: 30px;
 
   @include tablet {
-    width: 45.5%;
-    min-width: 309px;
+    width: 309px;
   }
 
   @include mobile {
