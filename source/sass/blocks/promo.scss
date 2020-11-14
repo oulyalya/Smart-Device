@@ -1,10 +1,13 @@
 .promo {
   min-height: 650px;
-  padding-top: 235px;
-  padding-left: 125px;
+  padding-top: 232px;
+  padding-left: 140px;
 
-  @include bg-img("../img/bg-promo@1x.jpg", "../img/bg-promo@2x.jpg", $c_additional);
-
+  @include bg-img(
+    "../img/bg-promo@1x.jpg",
+    "../img/bg-promo@2x.jpg",
+    $c_additional
+  );
 
   @include tablet {
     min-height: 638px;
@@ -32,21 +35,25 @@
 
 .promo h1 {
   margin-bottom: 13px;
+  letter-spacing: -2px;
 
   @include font(54px, 1.22, $bold);
   color: $c_light-one;
 
   @include tablet {
     @include font(50px, 1.22, $bold);
+    letter-spacing: -1.5px;
   }
 
   @include mobile {
     @include font(36px, 1.25, $bold);
+    letter-spacing: -1px;
   }
 }
 
 .promo p {
   margin-top: 0;
+  letter-spacing: 0.4px;
 
   @include font(20px, 1.2, $reg);
   color: $c_light-one;

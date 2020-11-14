@@ -9,7 +9,7 @@
 
   @include mobile {
     padding-top: 40px;
-    padding-bottom: 65px;
+    padding-bottom: 63px;
   }
 }
 
@@ -106,7 +106,7 @@
 }
 
 .contacts__address {
-  margin-top: 35px;
+  margin-top: 33px;
 
   @include tablet {
     margin-top: 25px;
@@ -114,6 +114,7 @@
 
   @include mobile {
     margin-top: 30px;
+    letter-spacing: -0.3px;
   }
 }
 
@@ -171,6 +172,16 @@
 
 .contacts a {
   @include hover-effects;
+
+  &:hover,
+  &:focus {
+    color: $c_bright-hover;
+  }
+
+  &:active {
+    color: $c_bright-hover;
+    opacity: 0.6;
+  }
 }
 
 .contacts__address a::before {

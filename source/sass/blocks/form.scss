@@ -8,7 +8,7 @@
   background-color: $c_main;
 
   @include tablet {
-    padding-top: 40px;
+    padding-top: 45px;
   }
 
   @include mobile {
@@ -36,7 +36,7 @@
 
   @include mobile {
     line-height: 1.4;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 }
 
@@ -44,7 +44,7 @@
 .form input[type="tel"],
 .form input[type="email"] {
   width: 100%;
-  margin-bottom: 17px;
+  margin-bottom: 15px;
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 15px;
@@ -57,7 +57,7 @@
 
   &::placeholder {
     @include font(14px, 1.5, $reg);
-    color: $c_main;
+    color: rgba($c_main, 0.3);
   }
 
   &:hover {
@@ -70,8 +70,9 @@
   }
 
   @include tablet {
-    padding-top: 9px;
-    padding-bottom: 9px;
+    margin-bottom: 19px;
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
   @include mobile {
@@ -115,11 +116,11 @@
   height: 18px;
   letter-spacing: -0.2px;
   background-color: $c_light-one;
-  border: 2px solid transparent;
+  border: 3px solid transparent;
 }
 
 .form input[type="checkbox"]:focus + label::before {
-  border: 2px solid rgba($c_main, 0.5);
+  border: 3px solid rgba($c_main, 0.5);
 }
 
 .form input[type="checkbox"]:checked + label {

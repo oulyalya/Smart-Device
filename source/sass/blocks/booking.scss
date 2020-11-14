@@ -2,7 +2,11 @@
   padding-top: 50px;
   padding-bottom: 50px;
 
-  @include bg-img("../img/bg-booking@1x.jpg", "../img/bg-booking@2x.jpg", $c_bg-light);
+  @include bg-img(
+    "../img/bg-booking@1x.jpg",
+    "../img/bg-booking@2x.jpg",
+    $c_bg-light
+  );
 
   @include tablet {
     padding-top: 60px;
@@ -10,7 +14,7 @@
   }
 
   @include mobile {
-    padding-top: 40px;
+    padding-top: 35px;
     padding-bottom: 65px;
   }
 }
@@ -33,6 +37,7 @@
 
   @include tablet {
     max-width: none;
+    padding-bottom: 10px;
   }
 
   @include mobile {
@@ -57,6 +62,7 @@
 
 .booking p {
   margin-top: 0;
+  margin-bottom: 25px;
 
   @include font(18px, 1.5, $reg);
 
