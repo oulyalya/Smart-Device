@@ -235,6 +235,10 @@
   }
 }
 
+.main-nav--closed .main-nav__logo {
+  fill: $c_light-one;
+}
+
 .main-nav--closed .main-nav__toggle {
   @include mobile {
     position: relative;
