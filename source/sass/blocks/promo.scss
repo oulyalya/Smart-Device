@@ -1,7 +1,7 @@
 .promo {
   min-height: 650px;
   padding-top: 232px;
-  padding-left: 140px;
+  padding-left: 95px;
 
   @include bg-img(
     "../img/bg-promo@1x.jpg",
@@ -35,7 +35,7 @@
 
 .promo h1 {
   margin-bottom: 13px;
-  letter-spacing: -2px;
+  letter-spacing: -1.8px;
 
   @include font(54px, 1.22, $bold);
   color: $c_light-one;

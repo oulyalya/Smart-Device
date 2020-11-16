@@ -26,12 +26,11 @@
 @mixin section-title {
   @include font(28px, 1.5, $semi);
   text-align: center;
-  letter-spacing: -1.5px;
+  letter-spacing: -1.2px;
 
   @include tablet {
     @include font(26px, 1.4, $semi);
     text-align: center;
-    letter-spacing: -1px;
   }
 
   @include mobile {
@@ -62,6 +61,7 @@
   @include tablet {
     @include font(34px, 1.5, $bold);
     text-align: center;
+    letter-spacing: -1px;
   }
 
   @include mobile {

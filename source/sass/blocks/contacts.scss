@@ -154,6 +154,10 @@
   }
 }
 
+.contacts__address p {
+  letter-spacing: -0.3px;
+}
+
 .contacts__address p::before {
   top: 33%;
   left: -3px;

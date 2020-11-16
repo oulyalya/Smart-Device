@@ -3,7 +3,11 @@
   padding-top: 90px;
   padding-bottom: 90px;
 
-  @include bg-img("../img/bg-advantages@1x.jpg", "../img/bg-advantages@2x.jpg", $c_bg-light);
+  @include bg-img(
+    "../img/bg-advantages@1x.jpg",
+    "../img/bg-advantages@2x.jpg",
+    $c_bg-light
+  );
 
   @include tablet {
     padding-top: 70px;
@@ -71,6 +75,8 @@
   @include mobile {
     margin-bottom: 5px;
     padding-right: 50px;
+    // letter-spacing: -0.5px;
+    letter-spacing: 0.5px;
   }
 }
 
