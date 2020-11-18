@@ -40,6 +40,11 @@
   }
 }
 
+.form input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
 .form input[type="text"],
 .form input[type="tel"],
 .form input[type="email"] {
