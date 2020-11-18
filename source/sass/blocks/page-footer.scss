@@ -1,15 +1,16 @@
 .page-footer {
   @include flex(row);
   align-items: center;
-  min-height: 138px;
+  padding-top: 48px;
+  padding-bottom: 40px;
   background-color: $c_main;
 
   @include tablet {
-    min-height: 120px;
+    padding-top: 38px;
+    padding-bottom: 38px;
   }
 
   @include mobile {
-    min-height: 0;
     padding-top: 40px;
     padding-bottom: 30px;
   }
