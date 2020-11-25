@@ -14,7 +14,7 @@ body {
   position: relative;
   overflow-x: hidden;
 
-  @include font(16px, 1.5, $reg);
+  @include font-one(40px, 1.5);
 }
 
 a {
