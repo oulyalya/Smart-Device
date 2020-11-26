@@ -3,18 +3,19 @@ $font-second: "Roboto Condensed", "Arial", sans-serif;
 $reg: 400;
 $bold: 700;
 
-// $mobile-min-width: 320px;
-// $mobile-max-width: 767px;
-// $tablet-min-width: 768px;
-// $tablet-max-width: 1023px;
-// $desktop-min-width: 1024px;
-// $desktop-max-width: 1366px;
-// $mobile-pads: 15px;
-// $tablet-pads: 45px;
-// $desktop-pads: 103px;
+$mobile-min-width: 320px;
+$mobile-max-width: 767px;
+$tablet-min-width: 768px;
+$tablet-max-width: 1023px;
+$desktop-min-width: 1024px;
+$desktop-max-width: 1480px;
+$mobile-pads: 15px;
+$tablet-pads: 25px;
+$desktop-pads: 145px;
+$desktop-pads-narrow: 20px;
 
-// $retina-dpi: 144dpi;
-// $retina-dppx: 1.5dppx;
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
 
 // $c_main: #011c40; /*тёмно-синий*/
 // $c_bg: #141517; /*тёмно-синий*/

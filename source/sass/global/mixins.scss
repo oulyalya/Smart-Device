@@ -1,20 +1,20 @@
-// @mixin tablet {
-//   @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
-//     @content;
-//   }
-// }
+@mixin tablet {
+  @media (min-width: $tablet-min-width) and (max-width: $tablet-max-width) {
+    @content;
+  }
+}
 
-// @mixin mobile {
-//   @media (min-width: 0) and (max-width: $mobile-max-width) {
-//     @content;
-//   }
-// }
+@mixin mobile {
+  @media (min-width: 0) and (max-width: $mobile-max-width) {
+    @content;
+  }
+}
 
-// @mixin retina {
-//   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-//     @content;
-//   }
-// }
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}
 
 @mixin font-one($size, $height) {
   font-family: $font-first;
@@ -61,61 +61,50 @@
 //   }
 // }
 
-// @mixin section-title-bigger {
-//   @include font(40px, 1.5, $bold);
-//   letter-spacing: -1.5px;
+@mixin container {
+  position: relative;
+  width: auto;
+  min-width: $desktop-min-width;
+  max-width: $desktop-max-width;
+  margin: 0 auto;
+  padding: 0 $desktop-pads;
+  background-color: rgba(yellow, 0.5);
 
-//   @include tablet {
-//     @include font(34px, 1.5, $bold);
-//     text-align: center;
-//     letter-spacing: -1px;
-//   }
+  &--narrow-pads {
+    padding: 0 $desktop-pads-narrow;
+    background-color: rgba(pink, 0.5);
+  }
 
-//   @include mobile {
-//     @include font(24px, 1.3, $bold);
-//     text-align: center;
-//     letter-spacing: -0.1px;
-//   }
-// }
+  @include tablet {
+    min-width: $tablet-min-width;
+    width: auto;
+    padding: 0 $tablet-pads;
+  }
 
-// @mixin container {
-//   position: relative;
-//   width: auto;
-//   min-width: $desktop-min-width;
-//   max-width: $desktop-max-width;
-//   margin: 0 auto;
-//   padding: 0 $desktop-pads;
+  @include mobile {
+    min-width: $mobile-min-width;
+    width: 100%;
+    padding: 0 $mobile-pads;
+  }
+}
 
-//   @include tablet {
-//     min-width: $tablet-min-width;
-//     width: auto;
-//     padding: 0 $tablet-pads;
-//   }
+@mixin flex($flex-direction) {
+  display: flex;
+  flex-direction: $flex-direction;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
-//   @include mobile {
-//     min-width: $mobile-min-width;
-//     width: 100%;
-//     padding: 0 $mobile-pads;
-//   }
-// }
-
-// @mixin flex($flex-direction) {
-//   display: flex;
-//   flex-direction: $flex-direction;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-// }
-
-// @mixin visually-hidden {
-//   position: absolute;
-//   width: 1px;
-//   height: 1px;
-//   margin: -1px;
-//   padding: 0;
-//   border: 0;
-//   clip: rect(1px, 1px, 1px, 1px);
-//   overflow: hidden;
-// }
+@mixin visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+}
 
 // @mixin reset {
 //   margin: 0;
