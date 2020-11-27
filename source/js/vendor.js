@@ -39,7 +39,7 @@
             observer.disconnect();
             window.removeEventListener("resize", debouncedCheck, false);
             window.removeEventListener("orientationchange", debouncedCheck, false);
-          } catch (ignore) {}
+          } catch (ignore) { }
         };
       } else {
         document.documentElement.addEventListener("DOMSubtreeModified", debouncedCheck, false);
@@ -148,8 +148,8 @@
           bcr = false;
         }
         href = uses[i].getAttribute("href")
-            || uses[i].getAttributeNS(xlinkNS, "href")
-            || uses[i].getAttribute("xlink:href");
+          || uses[i].getAttributeNS(xlinkNS, "href")
+          || uses[i].getAttribute("xlink:href");
         if (href && href.split) {
           url = href.split("#");
         } else {

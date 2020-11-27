@@ -1,0 +1,38 @@
+.btn {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: white;
+  background-color: $c_theme-main;
+  border-radius: 5px;
+  border: 1px solid $c_theme-main;
+
+  &:hover,
+  &:focus {
+    background-color: $c_hover;
+    border: 1px solid $c_hover;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.btn--ghost {
+  color: $c_theme-main;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $c_theme-main;
+    border: 1px solid $c_theme-main;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
