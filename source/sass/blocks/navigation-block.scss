@@ -1,0 +1,39 @@
+.navigation-block {
+  margin-left: 7%;
+
+}
+
+.navigation-block__list {
+  @include flex(row);
+  width: 555px;
+  margin-bottom: 50px;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-block__list-item {
+  width: 250px;
+  margin-bottom: 6px;
+
+  &--companies {
+    order: 1;
+  }
+  &--products {
+    order: 3;
+  }
+  &--production {
+    order: 5;
+  }
+  &--setup {
+    order: 7;
+  }
+  &--parts {
+    order: 2;
+  }
+  &--delivery {
+    order: 4;
+  }
+  &--contacts {
+    order: 6;
+  }
+}

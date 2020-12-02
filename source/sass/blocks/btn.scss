@@ -1,19 +1,30 @@
 .btn {
   display: inline-block;
   vertical-align: middle;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+  text-align: center;
+
+  @include font-two(14px, 1.17, $bold);
+  text-transform: uppercase;
   color: white;
+  letter-spacing: 1px;
   background-color: $c_theme-main;
   border-radius: 5px;
   border: 1px solid $c_theme-main;
+
+  @include mobile {
+    font-size: 16px;
+    text-align: center;
+  }
 
   &:hover,
   &:focus {
     background-color: $c_hover;
     border: 1px solid $c_hover;
+    transition: 0.3s ease-in-out;
   }
 
   &:active {
@@ -21,8 +32,25 @@
   }
 }
 
-.btn--ghost {
+.btn--ghost-blue {
   color: $c_theme-main;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: $c_theme-main;
+    border: 1px solid $c_theme-main;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.btn--ghost-white {
+  color: white;
+  border: 1px solid white;
   background-color: transparent;
 
   &:hover,

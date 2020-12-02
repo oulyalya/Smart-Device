@@ -8,7 +8,7 @@ $mobile-max-width: 767px;
 $tablet-min-width: 768px;
 $tablet-max-width: 1023px;
 $desktop-min-width: 1024px;
-$desktop-max-width: 1510px;
+$desktop-max-width: 1450px;
 $mobile-pads: 15px;
 $tablet-pads: 25px;
 $desktop-pads: 138px;
@@ -21,11 +21,7 @@ $c_theme-main: #00b2ff;
 $c_hover: #0665ab;
 $c_border: #ebebeb;
 $c_text: #666666;
-
-// $c_main: #011c40; /*тёмно-синий*/
-// $c_bg: #141517; /*тёмно-синий*/
-// $c_bg-light: #d7e5f3; /*светло-синий*/
-// $c_light-one: #f9fbfd; /*самый светлый для заголовков*/
-// $c_light-two: #d8d8d9; /*светлый для текста*/
-// $c_additional: #101a56; /*галочка, более яркий синий*/
-// $c_bright-hover: #0026ff; /*ховер контактов*/
+$c_bg: #1b2d37;
+$c_footer-heading: #1b2d37;
+$c_footer-text: #cdcdcd;
+$c_footer-line: #626962;

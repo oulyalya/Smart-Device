@@ -1,0 +1,129 @@
+.form {
+  @include flex(row);
+  padding: 35px 0;
+  background-color: $c_theme-main;
+}
+
+.form div {
+  @include flex(row);
+  position: relative;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 40px;
+  padding: 15px 15px;
+  color: white;
+  border: 0 none;
+  background-color: rgba(white, 0.1);
+  border: 1px solid transparent;
+
+  &:focus {
+    border: 1px solid white;
+    outline: 0 none;
+  }
+}
+
+.form textarea {
+  height: 155px;
+  resize: vertical;
+}
+
+.form *::placeholder {
+  color: white;
+}
+
+.form label {
+  color: rgba(white, 0.8);
+}
+
+.form input[type="checkbox"] {
+  width: auto;
+}
+
+.form button[type="submit"] {
+  display: inline-block;
+  vertical-align: middle;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @include font-two(14px, 1.17, $bold);
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-align: center;
+
+  border-radius: 5px;
+  border: 1px solid white;
+  background-color: transparent;
+
+  @include mobile {
+    font-size: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: rgba(white, 0.3);
+    border: 1px solid rgba(white, 0.3);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.form input[type="checkbox"] {
+  @include visually-hidden;
+}
+
+.form input[type="checkbox"] + label {
+  position: relative;
+  width: 270px;
+  margin-top: 10px;
+  padding-left: 40px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.form input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 9px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
+.form input[type="checkbox"] + label::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 9px;
+  display: none;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-size: 9px 12px;
+  background-position: 50%;
+  background-image: url("../img/tick.svg");
+}
+
+.feedback__form input[type="checkbox"]:checked + label::after {
+  display: block;
+}
+
+.form input[type="checkbox"]:disabled + label::before {
+  opacity: 0.2;
+}
+
+.feedback__form input[type="checkbox"]:checked:disabled + label::after {
+  display: block;
+  opacity: 0.3;
+}

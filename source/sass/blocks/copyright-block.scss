@@ -1,0 +1,45 @@
+.copyright-block {
+  position: relative;
+
+  @include flex(row);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.copyright-block::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: -100vw;
+  display: block;
+  width: 200vw;
+  height: 1px;
+  background-color: $c_footer-line;
+
+}
+
+.copyright-block__mobile-no-display {
+  @include mobile {
+    display: none;
+  }
+}
+
+.copyright-block p {
+  &:first-child {
+    margin-right: 75px;
+  }
+
+  &:last-child {
+  margin-left: 135px;
+  }
+}
+
+.copyright-block__wrapper {
+  @include flex(row);
+  justify-content: flex-start;
+  max-width: 80%;
+}

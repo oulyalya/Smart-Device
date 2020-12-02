@@ -1,0 +1,54 @@
+.logo {
+  &--header {
+    width: 202px;
+    height: 52px;
+
+    @include mobile {
+      transform: scale(0.8);
+      transform-origin: left;
+    }
+  }
+
+  &--footer {
+    width: 216px;
+  }
+}
+
+.logo__brain {
+  fill: $c_theme-main;
+
+  &--header {
+    @include mobile {
+      width: auto;
+    }
+  }
+}
+
+.logo__smart-device {
+  &--white {
+    fill: white;
+  }
+}
+
+.logo__service {
+  &--dark {
+    fill: #203c42;
+  }
+}
+
+.logo__technologies {
+  &--white {
+    fill: white;
+  }
+
+  &--dark {
+    fill: #788891;
+  }
+}
+
+.logo__smart-device--mobile-no-display,
+.logo__technologies--mobile-no-display {
+  @include mobile {
+    display: none;
+  }
+}

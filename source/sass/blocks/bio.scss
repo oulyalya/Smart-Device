@@ -1,0 +1,33 @@
+.bio__container {
+  outline: 1px solid red;
+  padding-top: 5px;
+  padding-bottom: 105px;
+  background-repeat: no-repeat;
+  background-size: 230px 320px;
+  background-position: 110px 40px;
+  background-image: url("../img/bg-2005@1x.png");
+  background-color: transparent;
+
+  @include retina {
+    background-image: url("../img/bg-2005@2x.png");
+  }
+}
+
+.bio h2 {
+  margin-bottom: 20px;
+  margin-left: 185px;
+
+  @include font-two(36px, 1.4, $reg);
+}
+
+.bio p {
+  margin-bottom: 25px;
+  margin-left: 185px;
+}
+
+.bio__btn {
+  min-width: 180px;
+  max-width: 300px;
+  margin-top: 15px;
+  margin-left: 185px;
+}

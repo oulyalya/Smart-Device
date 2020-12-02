@@ -1,0 +1,40 @@
+.feedback {
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background-color: pink;
+}
+
+.feedback h2 {
+  width: 570px;
+  margin-left: auto;
+  margin-bottom: 10px;
+
+  @include font-two(36px, 1.4, $reg);
+  color: white;
+}
+
+.feedback p {
+  width: 570px;
+  margin-top: 0;
+  margin-left: auto;
+  color: white;
+}
+
+.feedback__form {
+  width: 570px;
+  margin-left: auto;
+
+  outline: 1px solid blue;
+}
+
+.feedback__form input[type="text"] {
+  width: 270px;
+}
+
+.feedback__form input[type="tel"] {
+  width: 270px;
+}
+
+.feedback__form button[type="submit"] {
+  width: 270px;
+}

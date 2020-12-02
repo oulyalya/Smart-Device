@@ -1,0 +1,17 @@
+.social__link {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+  line-height: 1.5;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+  }
+}

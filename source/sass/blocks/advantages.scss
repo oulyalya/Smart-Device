@@ -1,6 +1,10 @@
+.advantages {
+  padding-top: 115px;
+  padding-bottom: 30px;
+}
+
 .advantages__container {
   @include flex(row);
-  align-items: center;
 
   @include mobile {
     justify-content: space-around;
@@ -12,11 +16,11 @@
   flex-shrink: 1;
   width: 570px;
   min-height: 299px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: 45px;
+  padding-right: 45px;
   color: $c_text;
   background-color: white;
   border: 1px solid $c_border;
@@ -31,8 +35,7 @@
   }
 
   @include mobile {
-    width: 100%;
-    max-width: 300px;
+    width: 290px;
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 25px;
@@ -43,9 +46,14 @@
 .advantages__item:hover {
   color: white;
   background-color: $c_theme-main;
+  transition: 0.3s ease-in-out;
 }
 
 .advantages__item h3 {
+  margin-top: 12px;
+  margin-bottom: 12px;
+
+  @include font-two(24px, 1.4, $reg);
   color: $c_theme-main;
 }
 

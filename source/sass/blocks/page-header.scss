@@ -1,0 +1,145 @@
+.page-header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding-top: 33px;
+  z-index: 100;
+
+  @include tablet {
+    padding-top: 20px;
+  }
+
+  @include mobile {
+    padding-top: 13px;
+  }
+}
+
+.page-header__container {
+  @include flex(row);
+}
+
+.page-header__logo-link {
+  width: 202px;
+  height: 52px;
+
+  @include mobile {
+    width: 55px;
+  }
+}
+
+.page-header__contacts {
+  max-width: 85%;
+  margin-left: auto;
+  text-align: right;
+}
+
+.page-header__link {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 10px;
+  margin-left: 78px;
+  padding-left: 35px;
+  color: white;
+  cursor: pointer;
+
+  @include tablet {
+    margin-left: 20px;
+    padding-left: 25px;
+  }
+
+  @include mobile {
+    margin-left: 15px;
+    padding-left: 25px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.page-header__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 50%;
+
+  @include tablet {
+    width: 26px;
+    height: 30px;
+  }
+
+  @include mobile {
+    width: 26px;
+    height: 30px;
+  }
+}
+
+.page-header__link--mail::before {
+  background-size: 19px 14px;
+  background-image: url("../img/icon-envelope.svg");
+
+  @include tablet {
+    background-size: 26px 19px;
+  }
+
+  @include mobile {
+    background-size: 26px 19px;
+  }
+}
+
+.page-header__link--tel::before {
+  background-size: 18px 18px;
+  background-image: url("../img/icon-phone.svg");
+
+  @include tablet {
+    background-size: 24px 24px;
+  }
+
+  @include mobile {
+    background-size: 24px 24px;
+  }
+}
+
+.page-header__link:hover {
+  opacity: 0.8;
+}
+
+.page-header__link-text {
+  @include tablet {
+    @include visually-hidden;
+  }
+
+  @include mobile {
+    @include visually-hidden;
+  }
+}
+
+.page-header__btn {
+  margin-top: 3px;
+  margin-bottom: 10px;
+  margin-left: 40px;
+
+  @include tablet {
+    @include visually-hidden;
+    visibility: hidden;
+    display: none;
+  }
+
+  @include mobile {
+    @include visually-hidden;
+    visibility: hidden;
+    display: none;
+  }
+}

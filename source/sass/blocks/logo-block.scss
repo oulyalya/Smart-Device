@@ -1,0 +1,16 @@
+.logo-block {
+  width: 250px;
+}
+
+.logo-block__logo-link {
+  display: block;
+  margin-bottom: 50px;
+}
+
+.logo-block__mobile-display-only {
+  display: none;
+
+  @include mobile {
+    display: inline;
+  }
+}

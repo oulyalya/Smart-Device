@@ -1,0 +1,68 @@
+.services {
+  padding-top: 90px;
+  padding-bottom: 130px;
+  color: white;
+  background-color: $c_bg;
+}
+
+.services__container {
+  @include flex(row);
+}
+
+.services h2 {
+  margin-top: 0;
+  margin-bottom: 50px;
+
+  @include font-two(36px, 1.4, $reg);
+  color: white;
+}
+
+.services__item {
+  position: relative;
+  display: block;
+  width: 31.5%;
+  height: 620px;
+  padding: 52px 48px;
+  background-color: red;
+
+  @include font-two(20px, 1.5, $reg);
+  color: white;
+
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+    transition: 0.3s ease-in-out;
+  }
+
+  &:active {
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.services__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 63px;
+  height: 63px;
+  background-color: $c_theme-main;
+  z-index: 10;
+}
+
+.services__item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: block;
+  width: 63px;
+  height: 63px;
+  background-repeat: no-repeat;
+  background-size: 6px 10px;
+  background-position: 50%;
+  background-image: url("../img/arrow.svg");
+  z-index: 20;
+}
