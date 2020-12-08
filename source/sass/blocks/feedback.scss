@@ -1,7 +1,36 @@
 .feedback {
   padding-top: 60px;
-  padding-bottom: 80px;
-  background-color: pink;
+  padding-bottom: 70px;
+  background-color: $c_theme-main;
+
+  @include tablet {
+    padding-top: 51px;
+    padding-bottom: 55px;
+  }
+
+  @include mobile {
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+}
+
+.feedback__container {
+  background-position: 120px 70px, -55px -150px;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 511px 288px, 670px 637px;
+  background-image: url("../img/bg-plane@1x.png"), url("../img/bg-triangles.svg");
+
+  @include retina {
+    background-image: url("../img/bg-plane@2x.png"), url("../img/bg-triangles.svg");
+  }
+
+  @include tablet {
+    background: none;
+  }
+
+  @include mobile {
+    background: none;
+  }
 }
 
 .feedback h2 {
@@ -11,6 +40,23 @@
 
   @include font-two(36px, 1.4, $reg);
   color: white;
+
+  @include tablet {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    margin-bottom: 18px;
+    margin-left: 0;
+    padding-left: 62px;
+    font-size: 32px;
+  }
+
+  @include mobile {
+    width: auto;
+    max-width: 100%;
+    margin-top: 0;
+    font-size: 28px;
+  }
 }
 
 .feedback p {
@@ -18,23 +64,104 @@
   margin-top: 0;
   margin-left: auto;
   color: white;
+
+  @include tablet {
+    display: inline-block;
+    vertical-align: middle;
+    width: auto;
+    margin-left: 0;
+    padding-left: 65px;
+  }
+
+  @include mobile {
+    width: auto;
+    max-width: 100%;
+  }
 }
 
 .feedback__form {
   width: 570px;
   margin-left: auto;
 
-  outline: 1px solid blue;
+  @include tablet {
+    width: 590px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
 }
 
 .feedback__form input[type="text"] {
   width: 270px;
+
+  @include tablet {
+    width: 280px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 31px;
+  }
 }
 
 .feedback__form input[type="tel"] {
   width: 270px;
+
+  @include tablet {
+    width: 280px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 31px;
+  }
+}
+
+.feedback__form textarea {
+  @include tablet {
+    height: 170px;
+  }
+
+  @include mobile {
+    width: 100%;
+    min-height: 105px;
+    margin-bottom: 21px;
+  }
+}
+
+.feedback__form input[type="checkbox"] + label {
+  @include tablet {
+    width: 275px;
+    margin-top: 10px;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-left: 40px;
+  }
 }
 
 .feedback__form button[type="submit"] {
   width: 270px;
+
+  @include tablet {
+    width: 280px;
+    margin-top: 0;
+    align-self: center;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 13px;
+    padding-bottom: 13px;
+  }
 }

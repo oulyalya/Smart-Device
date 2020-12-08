@@ -1,5 +1,4 @@
 .bio__container {
-  outline: 1px solid red;
   padding-top: 5px;
   padding-bottom: 105px;
   background-repeat: no-repeat;
@@ -11,6 +10,28 @@
   @include retina {
     background-image: url("../img/bg-2005@2x.png");
   }
+
+  @include tablet {
+    padding-top: 23px;
+    padding-bottom: 80px;
+    background-size: 250px 360px;
+    background-position: -10px 20px;
+  }
+
+  @include mobile {
+    padding-bottom: 60px;
+    background: none;
+  }
+}
+
+.bio__desktop-only {
+  @include tablet {
+    display: none;
+  }
+
+  @include mobile {
+    display: none;
+  }
 }
 
 .bio h2 {
@@ -18,11 +39,34 @@
   margin-left: 185px;
 
   @include font-two(36px, 1.4, $reg);
+
+  @include tablet {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 32px;
+  }
+
+  @include mobile {
+    font-size: 28px;
+    margin-top: 5px;
+    margin-left: 0;
+  }
 }
 
 .bio p {
   margin-bottom: 25px;
   margin-left: 185px;
+
+  @include mobile {
+    margin-bottom: 45px;
+    margin-left: 0;
+  }
+
+  &:last-of-type {
+    @include mobile {
+      margin-bottom: 25px;
+    }
+  }
 }
 
 .bio__btn {
@@ -30,4 +74,9 @@
   max-width: 300px;
   margin-top: 15px;
   margin-left: 185px;
+
+  @include mobile {
+    margin-top: 0;
+    margin-left: 0;
+  }
 }

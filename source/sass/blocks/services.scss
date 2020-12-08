@@ -1,8 +1,18 @@
 .services {
   padding-top: 90px;
-  padding-bottom: 130px;
+  padding-bottom: 85px;
   color: white;
   background-color: $c_bg;
+
+  @include tablet {
+    padding-top: 45px;
+    padding-bottom: 30px;
+  }
+
+  @include mobile {
+    padding-top: 55px;
+    padding-bottom: 30px;
+  }
 }
 
 .services__container {
@@ -15,6 +25,17 @@
 
   @include font-two(36px, 1.4, $reg);
   color: white;
+
+  @include tablet {
+    font-size: 32px;
+    margin-bottom: 53px;
+  }
+
+  @include mobile {
+    margin-bottom: 40px;
+    margin-left: 10px;
+    font-size: 28px;
+  }
 }
 
 .services__item {
@@ -22,21 +43,101 @@
   display: block;
   width: 31.5%;
   height: 620px;
+  margin-bottom: 45px;
   padding: 52px 48px;
-  background-color: red;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 
   @include font-two(20px, 1.5, $reg);
   color: white;
 
-  &:hover,
-  &:focus {
-    opacity: 0.8;
-    transition: 0.3s ease-in-out;
+  @include tablet {
+    width: 100%;
+    height: 258px;
+    margin-bottom: 45px;
+    padding: 40px 45px;
   }
 
-  &:active {
-    opacity: 0.5;
-    transition: 0.3s ease-in-out;
+  @include mobile {
+    width: 100%;
+    height: 258px;
+    margin-bottom: 30px;
+    padding: 20px 35px;
+  }
+
+  @include hover-effect;
+}
+
+.services__item--production {
+  background-image: url("../img/bg-service1vertical@1x.png");
+
+  @include retina {
+    background-image: url("../img/bg-service1vertical@2x.png");
+  }
+
+  @include tablet {
+    background-image: url("../img/bg-service1horizontal@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-service1horizontal@2x.png");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/bg-service1horizontal@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-service1horizontal@2x.png");
+    }
+  }
+}
+
+.services__item--assembling {
+  background-image: url("../img/bg-service2vertical@1x.png");
+
+  @include retina {
+    background-image: url("../img/bg-service2vertical@2x.png");
+  }
+
+  @include tablet {
+    background-image: url("../img/bg-service2horizontal@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-service2horizontal@2x.png");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/bg-service2horizontal@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-service2horizontal@2x.png");
+    }
+  }
+}
+
+.services__item--parts {
+  background-image: url("../img/bg-service3vertical@1x.png");
+
+  @include retina {
+    background-image: url("../img/bg-service3vertical@2x.png");
+  }
+
+  @include tablet {
+    background-image: url("../img/bg-service3horizontal@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-service3horizontal@2x.png");
+    }
+  }
+
+  @include mobile {
+    background-image: url("../img/bg-service3horizontal@1x.png");
+
+    @include retina {
+      background-image: url("../img/bg-service3horizontal@2x.png");
+    }
   }
 }
 

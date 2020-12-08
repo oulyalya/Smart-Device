@@ -2,11 +2,24 @@
   padding-top: 64px;
   font-size: 15px;
   color: $c_footer-text;
+
+  @include tablet {
+    padding-top: 20px;
+  }
+
+  @include mobile {
+    padding-top: 0;
+  }
+}
+
+.page-footer__container {
+  @include flex(row);
 }
 
 .page-footer h2 {
   margin-top: 0;
   margin-bottom: 25px;
+  
   @include font-two(15px, 1.2, $bold);
   letter-spacing: 0.7px;
   text-transform: uppercase;
@@ -16,8 +29,6 @@
 .page-footer a {
   font-size: 15px;
   color: $c_footer-text;
-}
 
-.page-footer__container {
-  @include flex(row);
+  @include hover-effect;
 }

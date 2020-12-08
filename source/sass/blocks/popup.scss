@@ -1,12 +1,108 @@
 .popup {
   position: absolute;
-  top: 20%;
+  top: 16%;
   left: 0;
   right: 0;
-  margin: 0 auto;
-  display: block;
-  width: 500px;
-  height: 1000px;
-  
   display: none;
+  margin: 0 auto;
+  padding: 35px 40px 20px;
+  width: 490px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 1000;
+  background-color: $c_theme-main;
+  color: white;
+}
+
+.popup__button-close {
+  position: absolute;
+  top: 28px;
+  right: 18px;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 0 none;
+  outline: 0 none;
+}
+
+.popup__button-close::before,
+.popup__button-close::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  z-index: 100;
+}
+
+.popup__button-close::before {
+  transform: rotate(45deg);
+}
+
+.popup__button-close::after {
+  transform: rotate(-45deg);
+}
+
+.popup__button-close:hover,
+.popup__button-close:focus {
+  &::before,
+  &::after {
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.popup__button-close:active {
+  &::before,
+  &::after {
+    opacity: 0.4;
+    transition: 0.3s ease-in-out;
+  }
+}
+
+.popup h2 {
+  max-width: 90%;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  @include font-two(28px, 1.17, $reg);
+}
+
+.popup p {
+  margin-bottom: 0;
+}
+
+.popup .form {
+  padding-bottom: 0;
+}
+
+.popup__form input[type="text"],
+.popup__form input[type="tel"],
+.popup__form textarea {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.popup__form textarea {
+  min-height: 0;
+}
+
+.popup__form button[type="submit"] {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+.popup__form input[type="checkbox"] + label {
+  width: 100%;
+  margin-bottom: 0;
+  padding-left: 50px;
+}
+
+.popup__form input[type="checkbox"] + label::before,
+.popup__form input[type="checkbox"]:checked + label::after {
+  top: 0;
+  left: 0;
 }

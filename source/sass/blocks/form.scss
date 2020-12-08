@@ -15,7 +15,6 @@
   margin-bottom: 40px;
   padding: 15px 15px;
   color: white;
-  border: 0 none;
   background-color: rgba(white, 0.1);
   border: 1px solid transparent;
 
@@ -26,20 +25,18 @@
 }
 
 .form textarea {
-  height: 155px;
+  min-height: 155px;
+  overflow-y: auto;
   resize: vertical;
 }
 
 .form *::placeholder {
   color: white;
+  opacity: 0.3;
 }
 
 .form label {
   color: rgba(white, 0.8);
-}
-
-.form input[type="checkbox"] {
-  width: auto;
 }
 
 .form button[type="submit"] {
@@ -82,7 +79,9 @@
 
 .form input[type="checkbox"] + label {
   position: relative;
+  display: block;
   width: 270px;
+  min-height: 50px;
   margin-top: 10px;
   padding-left: 40px;
   font-size: 14px;
@@ -101,29 +100,30 @@
   border: 1px solid white;
 }
 
-.form input[type="checkbox"] + label::after {
+.form input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(white, 0.3);
+}
+
+.form input[type="checkbox"]:checked + label::after {
   content: "";
   position: absolute;
   top: 0;
   left: 9px;
-  display: none;
+  display: block;
   width: 16px;
   height: 16px;
   background-repeat: no-repeat;
-  background-size: 9px 12px;
+  background-size: 8px 8px;
   background-position: 50%;
   background-image: url("../img/tick.svg");
-}
-
-.feedback__form input[type="checkbox"]:checked + label::after {
-  display: block;
+  z-index: 100;
 }
 
 .form input[type="checkbox"]:disabled + label::before {
   opacity: 0.2;
 }
 
-.feedback__form input[type="checkbox"]:checked:disabled + label::after {
+.form input[type="checkbox"]:checked:disabled + label::after {
   display: block;
   opacity: 0.3;
 }

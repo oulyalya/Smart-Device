@@ -1,6 +1,43 @@
 .contacts-block {
   width: 335px;
   margin-left: 1.5%;
+
+  @include tablet {
+    width: 48%;
+    padding-top: 40px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.contacts-block--top-line {
+  position: relative;
+
+  @include mobile {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      margin-left: -$mobile-pads;
+      display: block;
+      width: 100vw;
+      height: 1px;
+      background-color: $c_footer-line;
+    }
+  }
+}
+
+.contacts-block h2 {
+  @include mobile {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+  }
 }
 
 .contacts-block p {

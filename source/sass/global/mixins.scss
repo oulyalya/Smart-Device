@@ -30,37 +30,6 @@
   font-weight: $weight;
 }
 
-// @mixin section-title {
-//   @include font(28px, 1.5, $semi);
-//   text-align: center;
-//   letter-spacing: -1.2px;
-
-//   @include tablet {
-//     @include font(26px, 1.4, $semi);
-//     text-align: center;
-//   }
-
-//   @include mobile {
-//     @include font(24px, 1.4, $semi);
-//     text-align: center;
-//     letter-spacing: -1px;
-//   }
-// }
-
-// @mixin hover-effects {
-//   transition: 0.3s;
-//   transition-timing-function: ease-in;
-
-//   &:hover,
-//   &:focus {
-//     opacity: 0.8;
-//   }
-
-//   &:active {
-//     opacity: 0.6;
-//   }
-// }
-
 @mixin container {
   position: relative;
   width: auto;
@@ -68,11 +37,9 @@
   max-width: $desktop-max-width;
   margin: 0 auto;
   padding: 0 $desktop-pads;
-  background-color: rgba(yellow, 0.5);
 
   &--narrow-pads {
     padding: 0 $desktop-pads-narrow;
-    background-color: rgba(lime, 0.1);
   }
 
   @include tablet {
@@ -106,19 +73,83 @@
   overflow: hidden;
 }
 
-// @mixin reset {
-//   margin: 0;
-//   padding: 0;
-// }
+@mixin accordion-button-plus {
+  @include mobile {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 30px;
 
-// @mixin bg-img($url, $retina-url, $fallback-color) {
-//   background-position: 50%;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   background-image: url($url);
-//   background-color: $fallback-color;
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 36px;
+      right: 0;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $c_footer-line;
+      transition: 0.3s ease-in-out;
+    }
 
-//   @include retina {
-//     background-image: url($retina-url);
-//   }
-// }
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@mixin accordion-button-minus {
+  @include mobile {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+    transition: 0.3s ease-in-out;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 36px;
+      right: 0;
+      display: block;
+      width: 20px;
+      height: 2px;
+      background-color: $c_footer-line;
+    }
+
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+@mixin hover-effect {
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    transition: 0.3s ease-in-out;
+    outline: 0 none;
+  }
+
+  &:active {
+    opacity: 0.3;
+    transition: 0.3s ease-in-out;
+  }
+}

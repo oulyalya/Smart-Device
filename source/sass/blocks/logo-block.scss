@@ -1,16 +1,64 @@
 .logo-block {
+  position: relative;
   width: 250px;
+
+  @include tablet {
+    @include flex(row);
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  @include mobile {
+    width: 100%;
+    padding-top: 45px;
+    padding-bottom: 40px;
+    text-align: center;
+  }
+}
+
+.logo-block::after {
+  @include tablet {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-left: -100vw;
+    display: block;
+    width: 200vw;
+    height: 1px;
+    background-color: $c_footer-line;
+  }
 }
 
 .logo-block__logo-link {
   display: block;
   margin-bottom: 50px;
-}
 
-.logo-block__mobile-display-only {
-  display: none;
+  @include tablet {
+    max-width: 30%;
+    margin-bottom: 0;
+  }
 
   @include mobile {
-    display: inline;
+    margin-bottom: 10px;
+  }
+}
+
+.logo-block__dates {
+  display: none;
+
+  @include tablet {
+    display: block;
+    width: 44%;
+    text-align: right;
+    font-size: 14px;
+  }
+
+  @include mobile {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 32px;
+    letter-spacing: -0.5px;
   }
 }

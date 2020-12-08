@@ -1,6 +1,25 @@
 .navigation-block {
   margin-left: 7%;
 
+  @include tablet {
+    width: 49%;
+    margin-left: 0;
+    padding-top: 40px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.navigation-block h2 {
+  @include mobile {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-top: 30px;
+  }
 }
 
 .navigation-block__list {
@@ -9,31 +28,58 @@
   margin-bottom: 50px;
   padding: 0;
   list-style: none;
+
+  @include tablet {
+    margin-bottom: 0;
+    padding-bottom: 35px;
+  }
+
+  @include mobile {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 .navigation-block__list-item {
   width: 250px;
   margin-bottom: 6px;
 
-  &--companies {
-    order: 1;
+  @media (min-width: 1024px) {
+    &--companies {
+      order: 1;
+    }
+
+    &--products {
+      order: 3;
+    }
+
+    &--production {
+      order: 5;
+    }
+
+    &--setup {
+      order: 7;
+    }
+
+    &--parts {
+      order: 2;
+    }
+
+    &--delivery {
+      order: 4;
+    }
+
+    &--contacts {
+      order: 6;
+    }
   }
-  &--products {
-    order: 3;
+
+  @include tablet {
+    width: 100%;
+    margin-bottom: 5px;
   }
-  &--production {
-    order: 5;
-  }
-  &--setup {
-    order: 7;
-  }
-  &--parts {
-    order: 2;
-  }
-  &--delivery {
-    order: 4;
-  }
-  &--contacts {
-    order: 6;
+
+  @include mobile {
+    width: 100%;
   }
 }

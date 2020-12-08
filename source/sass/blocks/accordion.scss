@@ -1,0 +1,26 @@
+.accordion-block__wrapper {
+  @include mobile {
+    padding-top: 1px;
+    padding-bottom: 25px;
+  }
+}
+
+.accordion-block--closed h2 {
+  @include accordion-button-plus;
+}
+
+.accordion-block--closed .accordion-block__wrapper {
+  @include mobile {
+    display: none;
+  }
+}
+
+.accordion-block--open h2 {
+  @include accordion-button-minus;
+}
+
+.accordion-block--open .accordion-block__wrapper {
+  @include mobile {
+    display: block;
+  }
+}
