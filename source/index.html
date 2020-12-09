@@ -43,7 +43,8 @@
         <a class="page-header__link page-header__link--tel" href="tel:+74950005252">
           <span class="page-header__link-text">+7 (495) 000 52 52</span>
         </a>
-        <a class="page-header__btn btn btn--ghost-blue btn--ghost-white" class="page-header__btn btn" href="#">
+        <a class="page-header__btn btn btn--ghost-blue btn--ghost-white" class="page-header__btn btn"
+          id="callback-button" href="#">
           Заказать звонок
         </a>
       </div>
@@ -54,15 +55,16 @@
       <div class="promo__container container container--narrow-pads">
         <h1>Печатные платы</h1>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a class="promo__btn btn" href="#">
+        <a class="promo__btn btn" href="#feedback">
           <span class="promo__btn-mobile-no-display">Получить бесплатную консультацию</span>
           <span class="promo__btn-mobile-display-only">Бесплатная консультация</span>
         </a>
+        <!-- 1х: 705px; 2x: 1410px -->
         <img src="img/img-circuit@1x.png" srcset="img/img-circuit@2x.png 2x" alt="Плата" width="705" height="515">
-        <button class="promo__scroll-button">Скролл вниз</button>
+        <a class="promo__scroll-button" href="#advantages">Скролл вниз</ф>
       </div>
     </section>
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <div class="advantages__container container">
         <h2 class="visually-hidden">Почему мы красавчики</h2>
         <div class="advantages__item">
@@ -105,50 +107,55 @@
           с&nbsp;1997
           года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
         <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
-          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
-          РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
-          светотехники России.</p>
+          платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог<span
+            class="bio__desktop-only"> (РЖД),
+            РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
+            светотехники России</span>.</p>
         <a class="bio__btn btn btn--ghost" href="#">Подробнее</a>
       </div>
     </section>
     <section class="services">
       <div class="services__container container">
-        <h2>Service Device предлагает следующие товары и услуги</h2>
-        <a class="services__item" href="#">Производство<br>печатных плат</a>
-        <a class="services__item" href="#">Монтаж печатных<br>плат</a>
-        <a class="services__item" href="#">Комплектующие<br>для светотехники</a>
+        <h2>Service Device предлагает следующие товары и&nbsp;услуги</h2>
+        <a class="services__item services__item--production" href="#">Производство<br>печатных плат</a>
+        <a class="services__item services__item--assembling" href="#">Монтаж печатных<br>плат</a>
+        <a class="services__item services__item--parts" href="#">Комплектующие<br>для светотехники</a>
       </div>
     </section>
-    <section class="feedback">
+    <section class="feedback" id="feedback">
       <div class="feedback__container container">
-        <h2>Остались вопросы? Задайте их нам!</h2>
+        <h2>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="feedback__form form" action="#" method="POST">
-          <label class="visually-hidden" for="feedback-name">Введите имя</label>
-          <input type="text" id="feedback-name" placeholder="Имя">
+        <form class="form feedback__form" action="#" method="POST">
+          <label class="visually-hidden" for="feedback-name" required>Введите имя</label>
+          <input type="text" id="feedback-name" placeholder="Имя" required>
           <label class="visually-hidden" for="feedback-tel">Введите телефон</label>
-          <input type="tel" id="feedback-tel" placeholder="Телефон">
-          <textarea id="feedback-textarea" cols="30" rows="5">Ваш вопрос</textarea>
+          <input type="tel" id="feedback-tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__" required>
+          <textarea id="feedback-textarea" cols="30" rows="4" placeholder="Ваш вопрос" required></textarea>
           <button type="submit">Задать вопрос</button>
           <div>
-            <input type="checkbox" id="feedback-agree">
+            <input type="checkbox" id="feedback-agree" required>
             <label for="feedback-agree">Я согласен на обработку персональных данных</label>
           </div>
         </form>
       </div>
     </section>
 
-    <div class="overlay">
-      <div class="popup">
+    <div class="overlay" id="overlay">
+      <div class="popup" id="popup">
+        <h2>Закажите звонок</h2>
+        <p>Оставьте контакты, мы проконсультируем вас&nbsp;бесплатно в удобное время</p>
+        <button class="popup__button-close" id="popup__close" type="button"><span
+            class="visually-hidden">Закрыть</span></button>
         <form class="popup__form form" action="#" method="POST">
           <label class="visually-hidden" for="callback-name">Введите имя</label>
-          <input type="text" id="callback-name" placeholder="Имя">
+          <input type="text" id="callback-name" placeholder="Имя" required>
           <label class="visually-hidden" for="callback-tel">Введите телефон</label>
-          <input type="tel" id="callback-tel" placeholder="Телефон">
-          <textarea id="popup-textarea" cols="30" rows="10" placeholder="Ваш вопрос">Ваш вопрос</textarea>
-          <button type="submit">Задать вопрос</button>
+          <input type="tel" id="callback-tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__" required>
+          <textarea id="popup-textarea" cols="30" rows="4" placeholder="Ваш вопрос" required></textarea>
+          <button type="submit">Отправить</button>
           <div>
-            <input type="checkbox" id="popup-agree">
+            <input type="checkbox" id="popup-agree" required>
             <label for="popup-agree">Я согласен на обработку персональных данных</label>
           </div>
         </form>
@@ -232,7 +239,7 @@
             </g>
           </svg>
         </a>
-        <p class="logo-block__mobile-display-only">1999-2018 SD Service Devices</p>
+        <p class="logo-block__dates">1999-2018 SD Service Devices</p>
         <div class="social">
           <a class="social__link" href="#">
             <svg class="social__link-icon" width="29" height="35">
@@ -254,46 +261,51 @@
           </a>
         </div>
       </div>
-      <div class="page-footer__block navigation-block">
+      <div class="page-footer__block navigation-block contacts-block--top-line accordion-block">
         <h2>Разделы сайта</h2>
-        <ul class="navigation-block__list">
-          <li class="navigation-block__list-item navigation-block__list-item--companies"><a
-              class="navigation-block__link" href="#">О компании</a></li>
-          <li class="navigation-block__list-item navigation-block__list-item--products"><a
-              class="navigation-block__link" href="#">Продукты</a></li>
-          <li class="navigation-block__list-item navigation-block__list-item--production"><a
-              class="navigation-block__link" href="#">Производство печатных
-              плат</a></li>
-          <li class="navigation-block__list-item navigation-block__list-item--setup"><a class="navigation-block__link"
-              href="#">Монтаж печатных плат</a>
-          </li>
-          <li class="navigation-block__list-item navigation-block__list-item--parts"><a class="navigation-block__link"
-              href="#">Комплектующие</a></li>
-          <li class="navigation-block__list-item navigation-block__list-item--delivery"><a
-              class="navigation-block__link" href="#">Доставка</a></li>
-          <li class="navigation-block__list-item navigation-block__list-item--contacts"><a
-              class="navigation-block__link" href="#">Контакты</a></li>
-        </ul>
+        <div class="accordion-block__wrapper">
+          <ul class="navigation-block__list">
+            <li class="navigation-block__list-item navigation-block__list-item--companies"><a
+                class="navigation-block__link" href="#">О компании</a></li>
+            <li class="navigation-block__list-item navigation-block__list-item--products"><a
+                class="navigation-block__link" href="#">Продукты</a></li>
+            <li class="navigation-block__list-item navigation-block__list-item--production"><a
+                class="navigation-block__link" href="#">Производство печатных плат</a></li>
+            <li class="navigation-block__list-item navigation-block__list-item--setup"><a class="navigation-block__link"
+                href="#">Монтаж печатных плат</a>
+            </li>
+            <li class="navigation-block__list-item navigation-block__list-item--parts"><a class="navigation-block__link"
+                href="#">Комплектующие</a></li>
+            <li class="navigation-block__list-item navigation-block__list-item--delivery"><a
+                class="navigation-block__link" href="#">Доставка</a></li>
+            <li class="navigation-block__list-item navigation-block__list-item--contacts"><a
+                class="navigation-block__link" href="#">Контакты</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="page-footer__block contacts-block">
+      <div class="page-footer__block contacts-block contacts-block--top-line accordion-block">
         <h2>Наш офис</h2>
-        <p>г. Мытищи, Олимпийский проспект, д.10</p>
-        <a class="contacts-block__phone" href="tel:+74955894050">+7 (495) 589-40-50</a>
-        <a class="contacts-block__phone" href="tel:+79250038767">+7 (925) 003-87-67</a>
-        <a class="contacts-block__phone" href="tel:+792692608079">+7 (926) 926-080-79</a>
+        <div class="accordion-block__wrapper">
+          <div class="contacts-block__wrapper">
+            <p>г. Мытищи, Олимпийский проспект,&nbsp;д.10</p>
+            <a class="contacts-block__phone" href="tel:+74955894050">+7 (495) 589-40-50</a>
+            <a class="contacts-block__phone" href="tel:+79250038767">+7 (925) 003-87-67</a>
+            <a class="contacts-block__phone" href="tel:+792692608079">+7 (926) 926-080-79</a>
+          </div>
+        </div>
       </div>
       <div class="page-footer__block copyright-block">
         <div class="copyright-block__wrapper">
-          <p>Все права защищены</p>
-          <p class="copyright-block__mobile-no-display">1999-2018 SD Service Devices</p>
-          <p><a href="#">Условия конфиденциальности</a></p>
+          <p class="copyright-block__rights">Все права защищены</p>
+          <p class="copyright-block__dates">1999-2018 SD Service Devices</p>
+          <p class="copyright-block__terms"><a href="#">Условия конфиденциальности</a></p>
         </div>
-        <p><a href="#">Developed by wow studio</a></p>
+        <p class="copyright-block__studio"><a href="#">Developed by wow studio</a></p>
       </div>
     </div>
   </footer>
 
-  <!-- <script src="js/script.js"></script> -->
+  <script src="js/script.js"></script>
   <script defer src="js/vendor.js"></script>
 </body>
 </html>
