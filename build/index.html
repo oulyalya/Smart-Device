@@ -118,13 +118,13 @@
       <div class="feedback__container container">
         <h2>Остались вопросы? Задайте&nbsp;их&nbsp;нам!</h2>
         <p>Мы проконсультируем Вас бесплатно</p>
-        <form class="form feedback__form" action="#" method="POST">
+        <form class="form feedback__form" id="form" action="#" method="POST">
           <label class="visually-hidden" for="feedback-name" required="">Введите имя</label>
-          <input type="text" id="feedback-name" placeholder="Имя" required="">
+          <input type="text" id="feedback-name" name="username" placeholder="Имя" required="">
           <label class="visually-hidden" for="feedback-tel">Введите телефон</label>
-          <input type="tel" id="feedback-tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__" required="">
+          <input type="tel" id="feedback-tel" name="tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__" required="">
           <textarea id="feedback-textarea" cols="30" rows="4" placeholder="Ваш вопрос" required=""></textarea>
-          <button type="submit">Задать вопрос</button>
+          <button type="submit" id="feedback-submit">Задать вопрос</button>
           <div>
             <input type="checkbox" id="feedback-agree" required="">
             <label for="feedback-agree">Я согласен на обработку персональных данных</label>
@@ -144,7 +144,7 @@
           <label class="visually-hidden" for="callback-tel">Введите телефон</label>
           <input type="tel" id="callback-tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__" required="">
           <textarea id="popup-textarea" cols="30" rows="4" placeholder="Ваш вопрос" required=""></textarea>
-          <button type="submit">Отправить</button>
+          <button type="submit" id="callback-submit">Отправить</button>
           <div>
             <input type="checkbox" id="popup-agree" required="">
             <label for="popup-agree">Я согласен на обработку персональных данных</label>

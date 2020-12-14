@@ -36,12 +36,19 @@
     position: relative;
     display: block;
     width: 100%;
+    margin-bottom: 0;
     padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 .contacts-block p {
   margin-bottom: 6px;
+
+  @include mobile {
+    margin-top: 0;
+    line-height: 1.5;
+  }
 }
 
 .contacts-block__phone {

@@ -12,6 +12,10 @@
     padding-top: 20px;
     padding-bottom: 25px;
   }
+
+  @include mobile {
+    padding-top: 15px;
+  }
 }
 
 .copyright-block::before {
@@ -32,7 +36,11 @@
   max-width: 80%;
 
   @include mobile {
+    display: block;
     max-width: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -68,10 +76,6 @@
   @include tablet {
     margin: 0;
     font-size: 13px;
-  }
-
-  @include mobile {
-    background-color: red;
   }
 }
 

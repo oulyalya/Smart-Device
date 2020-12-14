@@ -24,6 +24,24 @@
     background-image: url("../img/bg-plane@2x.png"), url("../img/bg-triangles.svg");
   }
 
+  @media (min-width: 1150px) and (max-width: 1354px) {
+    background-position: 4% 45%, -55px -150px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 35%, 670px 637px;
+    background-image: url("../img/bg-plane@1x.png"), url("../img/bg-triangles.svg");
+
+    @include retina {
+      background-image: url("../img/bg-plane@2x.png"), url("../img/bg-triangles.svg");
+    }
+  }
+
+  @media (max-width: 1150px) {
+    background-position: -55px -150px;
+    background-repeat: no-repeat;
+    background-size: 670px 637px;
+    background-image: url("../img/bg-triangles.svg");
+  }
+
   @include tablet {
     background: none;
   }
@@ -142,7 +160,18 @@
 
   @include mobile {
     width: 100%;
-    padding-left: 40px;
+    margin-top: 15px;
+    padding-left: 35px;
+
+    &::before {
+      left: 0;
+    }
+  }
+}
+
+.feedback__form input[type="checkbox"]:checked + label::after {
+  @include mobile {
+    left: 0;
   }
 }
 
