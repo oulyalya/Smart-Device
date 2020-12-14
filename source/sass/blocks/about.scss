@@ -1,0 +1,14 @@
+.about {
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../img/bg-grey-triangles.svg");
+
+  @include tablet {
+    background-position: 100% 100%;
+  }
+
+  @include mobile {
+    background: none;
+  }
+}
