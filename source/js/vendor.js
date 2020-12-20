@@ -1,5 +1,4 @@
 'use strict';
-'use strict';
 
 // phone-mask
 // phone-mask
@@ -35,8 +34,8 @@
     return str;
   }
 
-  InputMask.prototype.mask = function (e) {
-    var _this = e.target,
+  InputMask.prototype.mask = function (evt) {
+    var _this = evt.target,
       matrix = this.layout,
       i = 0,
       def = matrix.replace(/\D/g, ''),

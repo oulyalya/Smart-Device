@@ -13,7 +13,9 @@
   let storedName = '';
   let storedTel = '';
 
-  submitBtn.onclick = () => {
+  submitBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
     const username = inputName.value;
     const tel = inputTel.value;
 
@@ -21,11 +23,10 @@
 
       localStorage.setItem('name', username);
       localStorage.setItem('telephone', tel);
-
     }
-  }
+  })
 
-  inputName.onfocus = () => {
+  inputName.addEventListener('focus', () => {
     try {
       storedName = localStorage.getItem('name');
     } catch (err) {
@@ -36,9 +37,9 @@
       inputName.value = localStorage.getItem('name');
       inputTel.focus();
     }
-  }
+  })
 
-  inputTel.onfocus = () => {
+  inputTel.addEventListener('focus', () => {
     try {
       storedTel = localStorage.getItem('telephone');
     } catch (err) {
@@ -49,5 +50,5 @@
       inputTel.value = localStorage.getItem('telephone');
       textarea.focus();
     }
-  }
+  })
 })();
