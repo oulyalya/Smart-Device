@@ -17,6 +17,8 @@
   color: white;
   background-color: rgba(white, 0.1);
   border: 1px solid transparent;
+  -webkit-appearance: none;
+  border-radius: 0;
 
   &:focus {
     border: 1px solid white;
@@ -27,7 +29,7 @@
 .form textarea {
   min-height: 155px;
   overflow-y: auto;
-  resize: vertical;
+  resize: none;
 }
 
 .form *::placeholder {
@@ -86,6 +88,10 @@
   padding-left: 40px;
   font-size: 14px;
   line-height: 1.2;
+}
+
+.form input[type="checkbox"] + label:hover {
+  cursor: pointer;
 }
 
 .form input[type="checkbox"] + label::before {

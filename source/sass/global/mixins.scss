@@ -46,12 +46,14 @@
     min-width: $tablet-min-width;
     width: auto;
     padding: 0 $tablet-pads;
+    overflow-x: hidden;
   }
 
   @include mobile {
     min-width: $mobile-min-width;
     width: 100%;
     padding: 0 $mobile-pads;
+    overflow-x: hidden;
   }
 }
 

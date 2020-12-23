@@ -23,6 +23,7 @@
   background-color: transparent;
   border: 0 none;
   outline: 0 none;
+  cursor: pointer;
 }
 
 .popup__button-close::before,
@@ -50,8 +51,8 @@
 .popup__button-close:focus {
   &::before,
   &::after {
-    opacity: 0.6;
     transition: 0.3s ease-in-out;
+    outline: 2px solid rgba(white, 0.3);
   }
 }
 

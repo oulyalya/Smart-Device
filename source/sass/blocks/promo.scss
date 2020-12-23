@@ -30,6 +30,10 @@
     background-size: 555px 500px;
   }
 
+  @media (min-width: 450px) and (max-width: $tablet-min-width) {
+    padding-left: 15%;
+  }
+
   @include mobile {
     @include flex(column);
     padding-top: 285px;
@@ -119,6 +123,10 @@
     height: 340px;
   }
 
+  @media (min-width: 450px) and (max-width: $tablet-min-width) {
+    margin-left: 15%;
+  }
+
   @include mobile {
     top: 90px;
     left: 23px;
@@ -144,6 +152,7 @@
 
   @include mobile {
     width: 100%;
+    max-width: 350px;
     margin-left: 0;
     padding-left: 0;
     padding-right: 0;

@@ -30,7 +30,7 @@
         <a class="page-header__link page-header__link--tel" href="tel:+74950005252">
           <span class="page-header__link-text">+7 (495) 000 52 52</span>
         </a>
-        <a class="page-header__btn btn btn--ghost-blue btn--ghost-white" id="callback-button" href="#">
+        <a class="page-header__btn btn btn--ghost-blue btn--ghost-white callback-btn" id="callback-button" href="#">
           Заказать звонок
         </a>
       </div>
@@ -45,9 +45,12 @@
           <span class="promo__btn-mobile-no-display">Получить бесплатную консультацию</span>
           <span class="promo__btn-mobile-display-only">Бесплатная консультация</span>
         </a>
-        <!-- 1х: 705px; 2x: 1410px -->
-        <img src="img/img-circuit@1x.png" srcset="img/img-circuit@2x.png 2x" alt="Плата" width="705" height="515">
-        <a class="promo__scroll-button" href="#advantages">Скролл вниз</a>
+        <picture>
+          <source type="image/webp" srcset="img/img-circuit@1x.webp 1x, img/img-circuit@2x.webp 2x">
+          <!-- 1х: 705px; 2x: 1410px -->
+          <img src="img/img-circuit@1x.png" srcset="img/img-circuit@2x.png 2x" alt="Плата" width="705" height="515">
+          <a class="promo__scroll-button" href="#advantages">Скролл вниз</a>
+        </picture>
       </div>
     </section>
     <section class="about">
@@ -118,12 +121,14 @@
         <p>Мы проконсультируем Вас бесплатно</p>
         <form class="form feedback__form" id="form" action="#" method="POST">
           <label class="visually-hidden" for="feedback-name">Введите имя</label>
-          <input type="text" id="feedback-name" name="username" placeholder="Имя" required>
+          <input class="feedback__name" type="text" id="feedback-name" name="username" placeholder="Имя" required>
           <label class="visually-hidden" for="feedback-tel">Введите телефон</label>
-          <input type="tel" id="feedback-tel" name="tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__" required>
+          <input class="feedback__tel" type="tel" id="feedback-tel" name="tel" placeholder="Телефон"
+            data-mask="+7 (___) ___-__-__" required>
           <label class="visually-hidden" for="feedback-textarea">Задайте ваш вопрос</label>
-          <textarea id="feedback-textarea" cols="30" rows="4" placeholder="Ваш вопрос" required></textarea>
-          <button type="submit" id="feedback-submit">Задать вопрос</button>
+          <textarea class="feedback__textarea" id="feedback-textarea" cols="30" rows="4" placeholder="Ваш вопрос"
+            required></textarea>
+          <button class="feedback__submit" type="submit" id="feedback-submit">Задать вопрос</button>
           <div>
             <input type="checkbox" id="feedback-agree" required>
             <label for="feedback-agree">Я согласен на обработку персональных данных</label>
@@ -140,12 +145,14 @@
             class="visually-hidden">Закрыть</span></button>
         <form class="popup__form form" action="#" method="POST">
           <label class="visually-hidden" for="callback-name">Введите имя</label>
-          <input type="text" id="callback-name" placeholder="Имя" required>
+          <input class="popup__name" type="text" id="callback-name" placeholder="Имя" required>
           <label class="visually-hidden" for="callback-tel">Введите телефон</label>
-          <input type="tel" id="callback-tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__" required>
+          <input class="popup__tel" type="tel" id="callback-tel" placeholder="Телефон" data-mask="+7 (___) ___-__-__"
+            required>
           <label class="visually-hidden" for="popup-textarea">Задайте ваш вопрос</label>
-          <textarea id="popup-textarea" cols="30" rows="4" placeholder="Ваш вопрос" required></textarea>
-          <button type="submit" id="callback-submit">Отправить</button>
+          <textarea class="popup__textarea" id="popup-textarea" cols="30" rows="4" placeholder="Ваш вопрос"
+            required></textarea>
+          <button class="popup__submit" type="submit" id="callback-submit">Отправить</button>
           <div>
             <input type="checkbox" id="popup-agree" required>
             <label for="popup-agree">Я согласен на обработку персональных данных</label>
@@ -158,7 +165,7 @@
   <footer class="page-footer">
     <div class="page-footer__container container container--narrow-pads">
       <div class="page-footer__block logo-block">
-        <a class="logo-block__logo-link" href="#page-header">
+        <a class="logo-block__link" href="#page-header">
           <svg class="logo logo--footer" width="202" height="52">
             <use xlink:href="img/sprite_auto.svg#icon-logo-service"></use>
           </svg>

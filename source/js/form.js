@@ -1,32 +1,32 @@
 'use strict';
 
 (function () {
-  const form = document.querySelector('form');
-  const inputName = form.querySelector('#feedback-name');
-  const inputTel = form.querySelector('#feedback-tel');
-  const textarea = form.querySelector("#feedback-textarea");
-  const submitBtn = form.querySelector('#feedback-submit');
+  var form = document.querySelector('form');
+  var inputName = form.querySelector('.feedback__name');
+  var inputTel = form.querySelector('.feedback__tel');
+  var textarea = form.querySelector('.feedback__textarea');
+  var submitBtn = form.querySelector('.feedback__submit');
 
-  let isStorageName = true;
-  let isStorageTel = true;
+  var isStorageName = true;
+  var isStorageTel = true;
 
-  let storedName = '';
-  let storedTel = '';
+  var storedName = '';
+  var storedTel = '';
 
   submitBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
 
-    const username = inputName.value;
-    const tel = inputTel.value;
+    var username = inputName.value;
+    var tel = inputTel.value;
 
     if (username && tel) {
 
       localStorage.setItem('name', username);
       localStorage.setItem('telephone', tel);
     }
-  })
+  });
 
-  inputName.addEventListener('focus', () => {
+  inputName.addEventListener('focus', function () {
     try {
       storedName = localStorage.getItem('name');
     } catch (err) {
@@ -36,10 +36,12 @@
     if (storedName) {
       inputName.value = localStorage.getItem('name');
       inputTel.focus();
+    } else if (!isStorageName) {
+      inputName.focus();
     }
-  })
+  });
 
-  inputTel.addEventListener('focus', () => {
+  inputTel.addEventListener('focus', function () {
     try {
       storedTel = localStorage.getItem('telephone');
     } catch (err) {
@@ -49,6 +51,8 @@
     if (storedTel) {
       inputTel.value = localStorage.getItem('telephone');
       textarea.focus();
+    } else if (!isStorageTel) {
+      inputTel.focus();
     }
-  })
+  });
 })();

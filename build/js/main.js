@@ -1,47 +1,49 @@
 'use strict';
 
 (function () {
-  const blocks = document.querySelectorAll('.accordion-block');
+  var blocks = document.querySelectorAll('.accordion-block');
 
   blocks.forEach(function (block) {
     block.classList.add('accordion-block--closed');
 
-    block.addEventListener('click', function () {
+    block.addEventListener('click', function (evt) {
       block.classList.toggle('accordion-block--closed');
       block.classList.toggle('accordion-block--open');
-    })
-  })
+      if (block.classList.contains('accordion-block--open') && !evt.target(block))
+        block.style.border = '5px solid red'
+    });
+  });
 })();
 
 'use strict';
 
 (function () {
-  const form = document.querySelector('form');
-  const inputName = form.querySelector('#feedback-name');
-  const inputTel = form.querySelector('#feedback-tel');
-  const textarea = form.querySelector("#feedback-textarea");
-  const submitBtn = form.querySelector('#feedback-submit');
+  var form = document.querySelector('form');
+  var inputName = form.querySelector('.feedback__name');
+  var inputTel = form.querySelector('.feedback__tel');
+  var textarea = form.querySelector('.feedback__textarea');
+  var submitBtn = form.querySelector('.feedback__submit');
 
-  let isStorageName = true;
-  let isStorageTel = true;
+  var isStorageName = true;
+  var isStorageTel = true;
 
-  let storedName = '';
-  let storedTel = '';
+  var storedName = '';
+  var storedTel = '';
 
   submitBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
 
-    const username = inputName.value;
-    const tel = inputTel.value;
+    var username = inputName.value;
+    var tel = inputTel.value;
 
     if (username && tel) {
 
       localStorage.setItem('name', username);
       localStorage.setItem('telephone', tel);
     }
-  })
+  });
 
-  inputName.addEventListener('focus', () => {
+  inputName.addEventListener('focus', function () {
     try {
       storedName = localStorage.getItem('name');
     } catch (err) {
@@ -51,10 +53,12 @@
     if (storedName) {
       inputName.value = localStorage.getItem('name');
       inputTel.focus();
+    } else if (!isStorageName) {
+      inputName.focus();
     }
-  })
+  });
 
-  inputTel.addEventListener('focus', () => {
+  inputTel.addEventListener('focus', function () {
     try {
       storedTel = localStorage.getItem('telephone');
     } catch (err) {
@@ -64,56 +68,134 @@
     if (storedTel) {
       inputTel.value = localStorage.getItem('telephone');
       textarea.focus();
+    } else if (!isStorageTel) {
+      inputTel.focus();
     }
-  })
+  });
 })();
 
 'use strict';
 
 (function () {
-  const callBackButton = document.querySelector('#callback-button');
-  const overlay = document.querySelector('#overlay');
-  const popup = document.querySelector('#popup');
-  const inputName = popup.querySelector('#callback-name');
-  const closePopupBtn = popup.querySelector('#popup__close');
+  var callBackButton = document.querySelector('.callback-btn');
+  var overlay = document.querySelector('.overlay');
+  var popup = document.querySelector('.popup');
+  var form = document.querySelector('.popup__form');
+  var inputName = form.querySelector('.popup__name');
+  var inputTel = form.querySelector('.popup__tel');
+  var inputTextarea = form.querySelector('.popup__textarea');
+  var closePopupBtn = popup.querySelector('.popup__button-close');
+  var submitPopupBtn = popup.querySelector('.popup__submit');
 
-  const showPopup = function () {
+  var isStorageName = true;
+  var isStorageTel = true;
+
+  var storedName = '';
+  var storedTel = '';
+
+
+  // var noScrollHandler = function (evt) {
+
+  //   // window.addEventListener('scroll', (e) => {
+  //   // window.addEventListener('scroll', noScrollHandler)
+
+  //   evt.preventDefault();
+  //   window.scrollTo(0, 0);
+  //   // });
+  // };
+
+  var showPopup = function () {
     popup.classList.add('appear');
 
     overlay.style.display = 'block';
     popup.style.display = 'block';
+
+    // window.addEventListener('scroll', noScrollHandler);
   };
 
-  const hidePopup = function () {
+  var hidePopup = function () {
     overlay.style.display = 'none';
     popup.style.display = 'none';
     callBackButton.addEventListener('click', openPopupHandler);
+    submitPopupBtn.removeEventListener('click', submitPopupBtnHandler);
+
+    // window.removeEventListener('scroll', noScrollHandler);
   };
 
-  const openPopupHandler = function () {
+  var openPopupHandler = function () {
     showPopup();
     inputName.focus();
     overlay.addEventListener('click', overlayPressHandler);
     document.addEventListener('keydown', escPressHandler);
     closePopupBtn.addEventListener('click', closePopupBtnHandler);
     callBackButton.removeEventListener('click', openPopupHandler);
+    submitPopupBtn.addEventListener('click', submitPopupBtnHandler);
   };
 
-  const closePopupBtnHandler = function () {
+  var closePopupBtnHandler = function () {
     hidePopup();
   };
 
-  const overlayPressHandler = function (evt) {
-    if (!evt.target.closest('#popup')) {
-      hidePopup();
+  var submitPopupBtnHandler = function (evt) {
+    if (inputName.value && inputTel.value && inputTextarea.value) {
+      evt.preventDefault();
     }
   }
 
-  const escPressHandler = function (evt) {
+  var overlayPressHandler = function (evt) {
+    if (!evt.target.closest('#popup')) {
+      hidePopup();
+    }
+  };
+
+  var escPressHandler = function (evt) {
     if (evt.key === 'Escape') {
       hidePopup();
     }
   };
 
   callBackButton.addEventListener('click', openPopupHandler);
+
+  submitPopupBtn.addEventListener('click', function (evt) {
+    evt.preventDefault();
+
+    var username = inputName.value;
+    var tel = inputTel.value;
+
+    if (username && tel) {
+
+      localStorage.setItem('name', username);
+      localStorage.setItem('telephone', tel);
+    }
+  });
+
+  inputName.addEventListener('focus', function () {
+    try {
+      storedName = localStorage.getItem('name');
+    } catch (err) {
+      isStorageName = false;
+    }
+
+    if (storedName) {
+      inputName.value = localStorage.getItem('name');
+      inputTel.focus();
+    } else if (!isStorageName) {
+      inputName.focus();
+    }
+  });
+
+  inputTel.addEventListener('focus', function () {
+    try {
+      storedTel = localStorage.getItem('telephone');
+    } catch (err) {
+      isStorageTel = false;
+    }
+
+    if (storedTel) {
+      inputTel.value = localStorage.getItem('telephone');
+      inputTextarea.focus();
+    } else if (!isStorageTel) {
+      inputTel.focus();
+    }
+  });
 })();

@@ -47,7 +47,7 @@
       return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a
     });
 
-    if (e.type == 'blur') {
+    if (evt.type == 'blur') {
       var regexp = new RegExp(this.maskreg);
       if (!regexp.test(_this.value)) _this.value = '';
     } else {

@@ -34,8 +34,8 @@
     return str;
   }
 
-  InputMask.prototype.mask = function (e) {
-    var _this = e.target,
+  InputMask.prototype.mask = function (evt) {
+    var _this = evt.target,
       matrix = this.layout,
       i = 0,
       def = matrix.replace(/\D/g, ''),
@@ -47,7 +47,7 @@
       return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? '' : a
     });
 
-    if (e.type == 'blur') {
+    if (evt.type == 'blur') {
       var regexp = new RegExp(this.maskreg);
       if (!regexp.test(_this.value)) _this.value = '';
     } else {
