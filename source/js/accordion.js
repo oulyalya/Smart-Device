@@ -10,4 +10,5 @@
       block.classList.toggle('accordion-block--closed');
       block.classList.toggle('accordion-block--open');
     });
-  })();
+  })
+})();

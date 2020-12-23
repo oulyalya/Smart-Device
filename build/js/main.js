@@ -9,10 +9,8 @@
     block.addEventListener('click', function (evt) {
       block.classList.toggle('accordion-block--closed');
       block.classList.toggle('accordion-block--open');
-      if (block.classList.contains('accordion-block--open') && !evt.target(block))
-        block.style.border = '5px solid red'
     });
-  });
+  })
 })();
 
 'use strict';
