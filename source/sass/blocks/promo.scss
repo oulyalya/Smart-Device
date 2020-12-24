@@ -30,7 +30,7 @@
     background-size: 555px 500px;
   }
 
-  @media (min-width: 450px) and (max-width: $tablet-min-width) {
+  @media (min-width: 450px) and (max-width: $mobile-max-width) {
     padding-left: 15%;
   }
 
@@ -123,7 +123,7 @@
     height: 340px;
   }
 
-  @media (min-width: 450px) and (max-width: $tablet-min-width) {
+  @media (min-width: 450px) and (max-width: $mobile-max-width) {
     margin-left: 15%;
   }
 

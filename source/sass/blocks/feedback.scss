@@ -145,6 +145,10 @@
     height: 170px;
   }
 
+  @include tablet {
+    margin-bottom: 30px;
+  }
+
   @include mobile {
     width: 100%;
     min-height: 105px;
@@ -155,7 +159,7 @@
 .feedback__form input[type="checkbox"] + label {
   @include tablet {
     width: 275px;
-    margin-top: 10px;
+    margin-top: 18px;
   }
 
   @include mobile {
@@ -192,5 +196,6 @@
     margin-right: auto;
     padding-top: 13px;
     padding-bottom: 13px;
+    letter-spacing: -0.5px;
   }
 }
