@@ -19,10 +19,9 @@
     var username = inputName.value;
     var tel = inputTel.value;
 
-    if (username && tel) {
-
-      localStorage.setItem('name', username);
-      localStorage.setItem('telephone', tel);
+    if (username && tel && isStorageSupport) {
+      localStorage.setItem('name', username.trim());
+      localStorage.setItem('telephone', tel.trim());
     }
   });
 
