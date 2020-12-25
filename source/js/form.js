@@ -19,7 +19,7 @@
     var username = inputName.value;
     var tel = inputTel.value;
 
-    if (username && tel && isStorageSupport) {
+    if (username && tel) {
       localStorage.setItem('name', username.trim());
       localStorage.setItem('telephone', tel.trim());
     }

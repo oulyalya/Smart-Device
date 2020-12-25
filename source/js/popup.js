@@ -59,7 +59,7 @@
     if (inputName.value && inputTel.value && inputTextarea.value) {
       evt.preventDefault();
     }
-  }
+  };
 
   var overlayPressHandler = function (evt) {
     if (!evt.target.closest('#popup')) {
