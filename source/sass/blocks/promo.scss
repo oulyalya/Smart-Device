@@ -32,6 +32,7 @@
 
   @media (min-width: 450px) and (max-width: $mobile-max-width) {
     padding-left: 15%;
+    overflow: hidden;
   }
 
   @include mobile {
