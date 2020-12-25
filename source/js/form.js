@@ -3,7 +3,6 @@
 (function () {
   var inputName = document.querySelector('.feedback__name');
   var inputTel = document.querySelector('.feedback__tel');
-  var textarea = document.querySelector('.feedback__textarea');
   var submitBtn = document.querySelector('.feedback__submit');
 
   var isStorageName = true;
@@ -15,7 +14,9 @@
 
   // Валидация для телефона
   if (inputTel) {
-    IMask(inputTel, { mask: '+{7}(000)000-00-00' });
+    IMask(inputTel, {
+      mask: '+{7}(000)000-00-00'
+    });
   }
 
   if (submitBtn) {
@@ -42,7 +43,6 @@
 
       if (storedName) {
         inputName.value = localStorage.getItem('name');
-        inputTel.focus();
       } else if (!isStorageName) {
         inputName.focus();
       }
@@ -59,7 +59,6 @@
 
       if (storedTel) {
         inputTel.value = localStorage.getItem('telephone');
-        textarea.focus();
       } else if (!isStorageTel) {
         inputTel.focus();
       }
