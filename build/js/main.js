@@ -44,7 +44,9 @@
 
   // Валидация для телефона
   if (inputTel) {
-    IMask(inputTel, { mask: '+{7}(000)000-00-00' });
+    IMask(inputTel, {
+      mask: '+{7}(000)000-00-00'
+    });
   }
 
   if (submitBtn) {
@@ -172,7 +174,9 @@
 
   if (popup) {
     if (inputTel) {
-      IMask(inputTel, { mask: '+{7}(000)000-00-00' });
+      IMask(inputTel, {
+        mask: '+{7}(000)000-00-00'
+      });
     }
 
     submitPopupBtn.addEventListener('click', function (evt) {

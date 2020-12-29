@@ -48,6 +48,7 @@
   padding-bottom: 15px;
   padding-left: 25px;
   padding-right: 25px;
+  cursor: pointer;
 
   @include font-two(14px, 1.17, $bold);
   text-transform: uppercase;

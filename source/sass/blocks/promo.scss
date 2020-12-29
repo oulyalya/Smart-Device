@@ -145,10 +145,13 @@
   font-size: 16px;
 
   @include tablet {
-    margin-top: 38px;
+    margin-top: 36px;
     margin-left: 115px;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 28px;
+    padding-right: 28px;
+    letter-spacing: 0.9px;
   }
 
   @include mobile {
